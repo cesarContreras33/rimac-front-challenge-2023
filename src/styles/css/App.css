@@ -1,4 +1,4 @@
-@import '../fonts/fonts.css';
+@import '../../assets/fonts/fonts.css';
 
 #root {
   max-width: 1280px;
@@ -44,8 +44,8 @@
 }
 
 .message{
-  font-family:'Lato';
-  font-size: 1.3rem;
+  font-family:'Sonoma';
+  font-size: 1rem;
   font-weight: normal;
 }
 
