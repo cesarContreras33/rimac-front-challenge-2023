@@ -68,12 +68,26 @@ npm install -d gulp-sass
 
 ### TESTING CON JEST Y TESTING LIBRARY
 ```js
-npm install --save-dev jest @testing-library/react @testing-library/jest-dom
+npm install --save-dev jest 
+npm install --save-dev @testing-library/react 
+npm install --save-dev @testing-library/jest-dom
 ```
 
 ### REACT ROUTER DOM
 ```js
 npm install react-router-dom
+```
+
+### AXIOS
+```js
+npm install axios
+```
+
+### REDUXTOOLKIT
+```js
+npm install react-redux
+npm install @reduxjs/toolkit
+
 ```
 
 ## DESARROLLO DE LA SOLUCION
@@ -120,7 +134,8 @@ RIMAC-FRONTEND-CHALLENGE/
 │   │
 │   ├── containers/ (contenedores de componentes)
 │   ├── styles
-│   │   ├── sass
+│   │   ├── scss
+│   │   │    ├── main.scss(header/footer)
 │   │   │    ├── variables.scss
 │   │   │    ├── globals.scss
 │   │   │    ├── forms.scss
@@ -132,8 +147,9 @@ RIMAC-FRONTEND-CHALLENGE/
 │   │   │           ├── formulary.scss
 │   │   │           ├── optionPlanType.scss
 │   │   │           ├── optionPlan.scss
-│   │   │           └── summary.scss
+│   │   │           └── summaryBox.scss
 │   │   └── css
+│   │        ├── main.css
 │   │        ├── seguroSalud.css
 │   │        ├── planes.css
 │   │        └── resumen.css
