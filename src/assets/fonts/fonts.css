@@ -1,0 +1,49 @@
+
+/* fuente BRSonoma */
+@font-face{
+  font-family: 'Sonoma';
+  src: url('../fonts/BRSonoma-Thin.otf') format('openType');
+  font-weight: 100;
+}
+
+@font-face{
+  font-family: 'Sonoma';
+  src: url('../fonts/BRSonoma-Regular.otf') format('openType');
+  font-weight: 400;
+}
+
+@font-face{
+  font-family: 'Sonoma';
+  src: url('../fonts/BRSonoma-Bold.otf') format('openType');
+  font-weight: 700;
+}
+
+
+
+/* fuente Lato */
+@font-face{
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Light.ttf') format('trueType');
+  font-weight: 100;
+}
+
+@font-face{
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Regular.ttf') format('trueType');
+  font-weight: 400;
+}
+
+@font-face{
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Bold.ttf') format('trueType');
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
