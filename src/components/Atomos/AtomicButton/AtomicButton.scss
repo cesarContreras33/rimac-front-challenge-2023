@@ -1,0 +1,26 @@
+@import 'styles/scss/variables';
+
+.atomicButton{
+  width: $button-w;
+  height: $button-h;
+  border-radius: $round-border;
+  font-family: $font1;
+  font-size: $button-f-size;
+  font-weight: $button-f-weight;
+  background-color: $button-bgc;
+  letter-spacing: 0.4px;
+  color:$white;
+  transition: .2s ease all;
+  border:$border;
+  outline:$border;
+  cursor:pointer;
+  &:focus, &:active{
+    border: $border;
+    box-shadow: $border;
+  }
+  &:hover{
+    background-color: $button-bgc-hover;
+    color:$button-color-hover;
+  }
+
+}
