@@ -1,0 +1,26 @@
+//colors
+$black:#000000;
+$white:#fff;
+
+$blackBgc1:#03050F;
+
+$font1:'Sonoma';
+$font2:'Latop';
+
+$rimac-red: #f7052d;
+
+
+//button
+$button-w:195px;
+$button-h:64px;
+$round-border: calc(64px/2);
+$button-bgc: $blackBgc1; 
+$button-color: $white; 
+$button-ff: $white; 
+$button-f-size:20px;
+$button-f-weight:bold;
+
+$button-bgc-hover: $rimac-red; 
+$button-color-hover: $white; 
+
+$border:none
