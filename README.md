@@ -43,7 +43,6 @@ Para este proyecto le estoy prestando interes a la aplicaicon de TDD (trst-drive
 
 ### RESUMEN
 
-
 ## REQUISITOS TECNICOS
 Debido a la naturaleza del entorno en el que vivira la aplicacion, navegador, se ha seleccionado la siguiente lista de recurzos tecnicos
 
@@ -57,7 +56,6 @@ Debido a la naturaleza del entorno en el que vivira la aplicacion, navegador, se
 
 
 ## LINEAS DE INSTALACION
-
 
 
 ### TESTING CON JEST Y TESTING LIBRARY
@@ -172,12 +170,9 @@ RIMAC-FRONTEND-CHALLENGE/
 ├── vite.config.ts
 ├── .prettierrc (configuración de Prettier) (QUITAR!!)
 ├── .babelrc (configuración de Babel) (QUITAR!!!)
-[]
 
-## ESTRUCTURA DE CARPETAS UTILIZADA
 
 se tomo en cuenta emplear una estructura centrada en TDD , o seaun enfoque a aplicar test a los componentes y para la componetizacion se esta empleando atom design
-
 
 
 
