@@ -9,6 +9,13 @@
   &__content{
     display: flex;
     flex-direction: column;
+    //justify-content:space-between;
+    height: 100%;
+    &--top{
+      display:flex;
+      flex-direction: column;
+      align-items:flex-start
+    }
     &--header{
       display: flex;
       flex-direction: column;
@@ -92,6 +99,9 @@
 
     }
     &--button{
+      display: flex;
+      align-items: flex-end;
+      flex-grow: 1;
       & .atomicButton{
         width: 100%;
         background-color: $R500;
