@@ -26,6 +26,11 @@
       color:$input-font-color;
       border:$input-border;
       outline:$input-border;
+      &[type='number']::-webkit-inner-spin-button,[type='number']::-webkit-outer-spin-button{
+          -webkit-appearance: none;
+          appearance: none;
+          margin: 0;
+      }
     }
   }
 }

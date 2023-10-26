@@ -14,7 +14,8 @@ const AtomicInput: React.FC<InputFormProps> = ({ label, value, onChange }) => {
       <div className="atomicInput__form">
         <label>{label}</label>
         <input
-          type="text"
+          type="number"
+          maxLength={9}
           value={value}
           onChange={onChange}
         />
