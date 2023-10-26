@@ -1,21 +1,21 @@
-
+import React, { useState } from 'react'
 import './AtomicCheck.scss'
 
-interface AtomicCheckProps {
-  msg: string;
-  checked: boolean;
-  onClick: () => void; 
-}
+const BlackCheckbox = ({ label }) => {
+  const [checked, setChecked] = useState(false)
 
-const AtomicCheck: React.FC<AtomicCheckProps> = ({ msg,onClick,checked }) => {
+  const toggleCheckbox = () => {
+    setChecked(!checked)
+  }
 
   return (
-    <p className="atomicCheck">
-      <input type="checkbox" checked={checked} onClick={onClick} />
-      <label >{msg}</label>
-    </p>
+    <label className={`mt-24 black-checkbox ${checked ? 'checked' : ''}`}>
+      <input type="checkbox" checked={checked} onChange={toggleCheckbox} />
+      <span className="checkmark"></span>
+      {label}
+    </label>
   )
 }
 
+export default BlackCheckbox
 
-export default AtomicCheck
