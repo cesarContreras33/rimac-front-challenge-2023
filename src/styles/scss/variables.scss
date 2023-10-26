@@ -1,13 +1,94 @@
 //colors
 $black:#000000;
 $white:#fff;
+$blueberry: #4F4FFF;
 
-$blackBgc1:#03050F;
+$grey-1:#03050F;
+$grey-10:#F8F9FF;
+$grey-60:#5E6488;
+$grey-100:#03050F;
+
+// gradients
+$grad1:#00F4E2;
+$grad2:#00FF7F;
+
+$N100:#FAFBFF;
+$N200:#EDEFFC;
+$N700:#141938;
+$S300:#389E0D;
+$N400:#D7DBF5;
+$N600:#7981B2;
+$R500:#FF1C44;
+$blackBgc1:$grey-100;
+
+$center:center;
+$left:left;
+$right:right;
+
 
 $font1:'Sonoma';
-$font2:'Latop';
+$font2:'Lato';
 
+$fw-light:lighter;
+$fw-normal:normal;
+$fw-bold:bold;
+
+$capitalize:capitalize;
+
+$s0:0px;
+$s01:0.1px;
+$s02:0.2px;
+$s04:0.4px;
+$s06:0.6px;
+$s1:1px;
+$s4:4px;
+$s8:8px;
+$s10:10px;
+$s12:12px;
+$s14:14px;
+$s16:16px;
+$s17:17px;
+$s18:18px;
+$s20:20px;
+$s24:24px;
+$s27:27px;
+$s30:30px;
+$s32:32px;
+$s40:40px;
+
+
+$max-width-content:1360px;
+
+$fz-04:$s4;
+$fz-08:$s8;
+$fz-10:$s10;
+$fz-12:$s12;
+$fz-14:$s14;
+$fz-16:$s16;
+$fz-17:$s17;
+$fz-18:$s18;
+$fz-20:$s20;
+$fz-32:$s32;
+$fz-40:$s40;
+
+
+
+$br-4:4px;
+$br-8:8px;
+$br-33:33px;
 $rimac-red: #f7052d;
+$none:none;
+
+
+$center:center;
+$start:flex-start;
+$end:flex-end;
+$space-between:space-between;
+
+
+$width25:25%;
+$width50:50%;
+$width100:100%;
 
 
 //button
@@ -18,9 +99,101 @@ $button-bgc: $blackBgc1;
 $button-color: $white; 
 $button-ff: $white; 
 $button-f-size:20px;
-$button-f-weight:bold;
-
+$button-f-weight:$fw-bold;
 $button-bgc-hover: $rimac-red; 
 $button-color-hover: $white; 
+$border:$none;
 
-$border:none
+
+
+//inputs
+$input-border-color: $grey-60;
+$label-font-size: $fz-12;
+$label-font-color: $grey-60;
+$input-font-size: $fz-16;
+$input-font-color: $grey-1;
+$input-border-radius: $br-8;
+
+$label-font-weight-lighter: $fw-light;
+$label-font-weight-normal: $fw-normal;
+$label-font-weight-bold: $fw-bold;
+$input-border:$border;
+
+
+
+//link
+$link-font:$font1;
+$link-font-size:$fz-12;
+$link-font-weight:$fw-bold;
+$link-font-height:$s20;
+$link-font-spacing:$s01;
+$link-font-color:$grey-100;
+$link-margin:$s0;
+
+
+
+//check
+$check-margin:$s0;
+$check-box-size:$s20;
+$check-box-bg:$grey-100;
+$check-box-radius:$s4;
+$check-font:$font1;
+$check-font-size:$fz-12;
+$check-font-color:$grey-100;
+$check-appearance:$none;
+
+
+
+//test description
+$description-font: $font1;
+$description-width: 100%;
+$description-font-size: $s14;
+$description-font-weight: $fw-normal;
+$description-letter-spacing: $s02;
+
+
+
+//pills
+$pill-font: $font1;
+$pill-justify:$center;
+$pill-align:$center;
+$pill-radius:$br-4;
+$pill-font-size:$s14;
+$pill-font-bold:$fw-bold;
+$pill-spacing:$s04;
+
+
+
+//title
+
+$title-font:$font1;
+$title-bold:$fw-bold;
+$title-font-size:$fz-32;
+$title-font-color:$grey-100;
+$title-line-height:$s40;
+
+
+
+//header
+$header-center:$center;
+$header-sb: $space-between;
+$header-width: $width100;
+
+
+//pageRegister
+$register-width50:$width50;
+$register-width100:$width100;
+
+
+//select
+$select-width100:$width100;
+
+
+
+//MOLECULAS
+
+//atomicSelectInput
+$selectinput-width100:$width100;
+$select-fz16:$fz-16;
+$select-none:$none;
+

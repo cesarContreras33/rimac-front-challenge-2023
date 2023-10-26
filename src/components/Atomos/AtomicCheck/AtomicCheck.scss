@@ -1,26 +1,86 @@
-@import 'styles/scss/variables';
+.black-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: $font1;
+  font-size: $fz-12;
+  margin-bottom: 12px;
+}
 
+input[type='checkbox'] {
+  display: none; /* Oculta el checkbox nativo */
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid $grey-100;
+  background-color: $grey-100;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 4px;
+}
+
+.checkmark::before {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+input:checked ~ .checkmark::before {
+  display: block;
+}
+
+.checkmark::before {
+  left: 7px;
+  top: 3px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.black-checkbox:hover .checkmark {
+  border-color: #333;
+}
+
+.mt-24{
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+
+/* 
 .atomicCheck{
   display:flex;
   align-items: center;
-  gap:12px;
+  gap:$s12;
+  margin: $check-margin;
+  margin-bottom: $s12;
   & input[type="checkbox" i]{
-    width: 20px;
-    height: 20px;
-    background-color:black;
-    border-radius: 4px;
+    width: $check-box-size;
+    height: $check-box-size;
+    background-color:$check-box-bg;
+    border-radius: $check-box-radius;
     appearance: none;
     cursor: pointer;
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
   }
   & label{
-    font-family: 'Sonoma';
-    font-size: 12px;
-    color: #0A051E;
+    font-family: $check-font;
+    font-size: $check-font-size;
+    color: $check-font-color;
   }
-  &.check{
-    background-color: rgb(236,72,153);
+  &.checked{
+    //background-color:$check-box-bg;
+    & input[type="checkbox" i]::before{
+      content:"";
+      background-image: none;
+    }
   }
 }
-
+ */
 
