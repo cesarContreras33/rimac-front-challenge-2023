@@ -20,12 +20,20 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': '/src',
-      components: '/src/components',
-      styles: '/src/styles'
+      '@': 'src',
+      'components': '/src/components',
+      'styles': '/src/styles',
+      'fonts': 'src/assets/fonts',
+      'images':'src/assets/images',
+      'atomos':'src/components/Atomos',
+      'moleculas':'src/components/Moleculas',
+      'organismos':'src/components/Organismos',
+      'template':'src/components/template',
+      'pages':'src/components/Pages'
     }
   },
   build:{
     outDir:'dist'
-  }
+  },
+  base:'/'
 })
