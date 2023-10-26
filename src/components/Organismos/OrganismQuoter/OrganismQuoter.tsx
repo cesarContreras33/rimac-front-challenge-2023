@@ -4,13 +4,17 @@ import AtomicDescription from '../../Atomos/AtomicDescription/AtomicDescription'
 import './OrganismQuoter.scss'
 import AtomCard from '../../Atomos/AtomCard/AtomCard'
 import AtomCardExtend from '../../Atomos/AtomCardExtend/AtomCardExtend'
+import { ClientType } from '../../../types/types'
+import { useSelector } from 'react-redux'
 
 //redux
 
 
 interface OrganismCuoterProps {
-  optionPlans: Plan[];
-  handleClickCard:(id:number) => void;
+  optionPlans: Plan[]
+  handleClickCard: (id: number) => void
+  plans: ClientType[]
+  discount:boolean
 }
 
 interface Plan {
@@ -24,18 +28,20 @@ interface Plan {
 
 const OrganismQuoter: React.FC<OrganismCuoterProps> = ({
   optionPlans,
-  handleClickCard
+  handleClickCard,
+  plans,
+  discount
 }) => {
+  const client = useSelector((state: any) => state.client.client)
 
+  const optionsSelected = optionPlans.some((plan) => plan.status)
 
-  const optionsSelected = optionPlans.some(plan => plan.status)
-  
   return (
     <div className="organismquoter">
       <div className="organismquoter__content">
         <div className="organismquoter__content--title">
           <div className="organismquoter__content--title-center">
-            <AtomicTitle msg={'Rocío ¿Para quién deseas cotizar?'} />
+            <AtomicTitle msg={`${client.name} ¿Para quién deseas cotizar?`} />
             <AtomicDescription
               msg={'Selecciona la opción que se ajuste más a tus necesidades.'}
             />
@@ -53,12 +59,17 @@ const OrganismQuoter: React.FC<OrganismCuoterProps> = ({
               ))}
           </div>
           <div
-            className={`organismquoter__content-group--options ${optionsSelected ? 'show':'hide'}`}
+            className={`organismquoter__content-group--options ${
+              optionsSelected ? 'show' : 'hide'
+            }`}
           >
             <div className="organismquoter__content-group--options-content">
-              <AtomCardExtend />
-              <AtomCardExtend />
-              <AtomCardExtend />
+              {plans &&
+                plans.map((plan, index) => {
+                  return (
+                    <AtomCardExtend key={index} {...plan} discount={discount} />
+                  )
+                })}
             </div>
           </div>
         </div>

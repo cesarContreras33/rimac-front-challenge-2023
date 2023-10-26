@@ -1,9 +1,14 @@
 
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import AtomicBreadcrump from '../../Atomos/AtomicBreadcrump/AtomicBreadcrump'
 import AtomicNavBtn from '../../Atomos/AtomicNavBtn/AtomicNavBtn'
 import './PageOptions.scss'
 import OrganismQuoter from '../../Organismos/OrganismQuoter/OrganismQuoter'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchPlans } from '../../../api/apiPlans'
+import { setPlans } from '../../../redux/slices/plansSlice'
+import { AppState, ClientType } from '../../../types/types'
+
 
 const PageOptions = () => {
 
@@ -30,6 +35,24 @@ const PageOptions = () => {
       status: false
     }
   ])
+
+  const [discount, setDiscount] = useState(false)
+
+  const dispatch = useDispatch()
+  const plans = useSelector((state:AppState) => state.plans.list.list)
+
+
+  useEffect(() => {
+    const getInfo = async () => {
+      const plans = await fetchPlans()
+      dispatch(setPlans(plans))
+    }
+    getInfo()
+  }, [])
+
+
+
+
   const handleClickCard = (id: number) => {
     const update = optionPlans.map(option=>{
       if(option.id === id){
@@ -42,6 +65,11 @@ const PageOptions = () => {
       }
     })
     setOptionPlans(update)
+    if(id===2){
+      setDiscount(true)
+    }else{
+      setDiscount(false)
+    }
   }
 
 
@@ -52,6 +80,8 @@ const PageOptions = () => {
       <OrganismQuoter
         optionPlans={optionPlans}
         handleClickCard={handleClickCard}
+        plans={plans}
+        discount={discount}
       />
     </div>
   )
