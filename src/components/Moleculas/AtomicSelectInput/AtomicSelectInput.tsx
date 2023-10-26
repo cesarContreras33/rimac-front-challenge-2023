@@ -1,6 +1,5 @@
-/* import React from 'react' */
-/* import AtomicInput from '../../Atomos/AtomicInput/AtomicInput' */
-//import {useState} from 'react'
+
+import React from 'react'
 import AtomicInput from '../../Atomos/AtomicInput/AtomicInput'
 import AtomicSelect from '../../Atomos/AtomicSelect/AtomicSelect'
 import './AtomicSelectInput.scss'
@@ -9,8 +8,8 @@ import './AtomicSelectInput.scss'
 interface AtomicSelectInputProps{
   options: string[]
   label:string,
-  onChangeSelect:()=>void,
-  onChangeInput:()=>void,
+  onChangeSelect:() => void,
+  onChangeInput:(e:React.ChangeEvent<HTMLInputElement>) => void,
   docNumber:number
 }
 
@@ -36,8 +35,3 @@ export default AtomicSelectInput
 
 
 
-/*   const [inputText, setInputText] = useState('')
-
-  const onHandleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputText(e.target.value)
-  } */

@@ -13,11 +13,11 @@
     border-right: none;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    padding: 0px 12px;    
+    padding: 0px 16px;    
     appearance: none;
     background: url('../../../assets/images/downarrow.svg') no-repeat right center;
     background-size: 16px 16px;
-    background-position: calc($selectinput-width100 - 16px) center;
+    background-position: calc($selectinput-width100 - 18px) center;
   }
   & .atomicInput{
     background-color: white;
