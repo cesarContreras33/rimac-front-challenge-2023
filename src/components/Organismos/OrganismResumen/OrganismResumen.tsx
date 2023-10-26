@@ -1,11 +1,15 @@
 
-
-//import React from 'react'
+import React from 'react'
 import AtomicTitle from '../../Atomos/AtomicTitle/AtomicTitle'
 import AtomicResumenCard from '../../Atomos/AtomicResumenCard/AtomicResumenCard'
-
+import { DataClient } from '../../../types/types'
 import './OrganismResumen.scss'
-const OrganismResumen = () => {
+
+interface OrganismResumenProps {
+  dataclient:DataClient
+}
+
+const OrganismResumen: React.FC<OrganismResumenProps> = ({ dataclient }) => {
   return (
     <div className="organismresumen">
       <div className="organismresumen__content">
@@ -13,11 +17,11 @@ const OrganismResumen = () => {
           <AtomicTitle msg={'Resumen del seguro'} />
         </div>
         <div className="organismresumen__content--resumen">
-            <AtomicResumenCard/>
+          <AtomicResumenCard dataclient={dataclient}/>
         </div>
       </div>
     </div>
-  ) 
+  )
 }
 
 export default OrganismResumen

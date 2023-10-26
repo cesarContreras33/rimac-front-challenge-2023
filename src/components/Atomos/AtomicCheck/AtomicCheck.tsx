@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './AtomicCheck.scss'
 
-const BlackCheckbox = ({ label }) => {
+const AtomicCheck = ({ label }) => {
   const [checked, setChecked] = useState(false)
 
   const toggleCheckbox = () => {
@@ -9,7 +9,7 @@ const BlackCheckbox = ({ label }) => {
   }
 
   return (
-    <label className={`mt-24 black-checkbox ${checked ? 'checked' : ''}`}>
+    <label className={`mt-24 atomiccheck ${checked ? 'checked' : ''}`}>
       <input type="checkbox" checked={checked} onChange={toggleCheckbox} />
       <span className="checkmark"></span>
       {label}
@@ -17,5 +17,5 @@ const BlackCheckbox = ({ label }) => {
   )
 }
 
-export default BlackCheckbox
+export default AtomicCheck
 

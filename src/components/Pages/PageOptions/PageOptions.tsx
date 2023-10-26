@@ -7,8 +7,10 @@ import OrganismQuoter from '../../Organismos/OrganismQuoter/OrganismQuoter'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchPlans } from '../../../api/apiPlans'
 import { setPlans } from '../../../redux/slices/plansSlice'
-import { AppState, ClientType } from '../../../types/types'
-
+import { AppState} from '../../../types/types'
+import { useNavigate } from 'react-router-dom'
+import {calcularEdad} from '../../../../utils/utils'
+import { addResumen } from '../../../redux/slices/clientSlice'
 
 const PageOptions = () => {
 
@@ -37,9 +39,15 @@ const PageOptions = () => {
   ])
 
   const [discount, setDiscount] = useState(false)
+  const [age, setAge] = useState(0)
+
 
   const dispatch = useDispatch()
+  const navigator = useNavigate()
   const plans = useSelector((state:AppState) => state.plans.list.list)
+  const client = useSelector((state: any) => state.client.client)
+
+  const plansFiltered = plans && plans.filter((plan) => plan.age > age)
 
 
   useEffect(() => {
@@ -49,6 +57,15 @@ const PageOptions = () => {
     }
     getInfo()
   }, [])
+
+  useEffect(()=>{
+    const age = async() => {
+      const birth = client.birthDay
+      const realage = await calcularEdad(birth)
+      setAge(realage)
+    }
+    age()
+  },[])
 
 
 
@@ -72,6 +89,14 @@ const PageOptions = () => {
     }
   }
 
+  const handleSelectPlan = (id:string) => {
+      //dispatch(addInfo(formFields))
+      const [selectPlan] = plans.filter(plan => plan.name === id)
+      console.log(selectPlan)
+      dispatch(addResumen(selectPlan))
+      navigator('/resumen')
+  }
+
 
   return (
     <div className="pageoptions">
@@ -80,8 +105,9 @@ const PageOptions = () => {
       <OrganismQuoter
         optionPlans={optionPlans}
         handleClickCard={handleClickCard}
-        plans={plans}
+        plans={plansFiltered}
         discount={discount}
+        handleSelectPlan={handleSelectPlan}
       />
     </div>
   )

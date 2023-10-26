@@ -2,28 +2,41 @@
 
 import './AtomicResumenCard.scss'
 import familia from '../../../assets/images/ic_family.svg'
+import React from 'react'
+import { DataClient } from '../../../types/types'
 
 
-const AtomicResumenCard = () => {
+interface AtomicResumenCardProps {
+  dataclient:DataClient
+}
+
+const AtomicResumenCard: React.FC<AtomicResumenCardProps> = ({ dataclient }) => {
+
   return (
     <div className="atomic-resumencard">
       <div className="atomic-resumencard__content">
         <div className="atomic-resumencard__content--user">
           <span>Precios calculados para:</span>
           <div className="atomic-resumencard__content--user-data">
-            <img src={familia}/>
-            <p>Rocio Miranda Díaz</p>
+            <img src={familia} />
+            <p>{`${dataclient.name} ${dataclient.lastName}`}</p>
           </div>
         </div>
         <div className="atomic-resumencard__content--payment">
           <p>Responsable de pago</p>
-          <p>DNI: <span>44491327</span></p>
-          <p>Celular: <span>984556599</span></p>
+          <p>
+            {dataclient.tipoDoc}: <span>{dataclient.nroDoc}</span>
+          </p>
+          <p>
+            Celular: <span>{dataclient.nroCell}</span>
+          </p>
         </div>
         <div className="atomic-resumencard__content--plan">
           <p>Plan elegido</p>
-          <p>Plan en Casa y Clínica</p>
-          <p>Costo del Plan: <span>$99</span> al mes</p>
+          <p>{dataclient.plan}</p>
+          <p>
+            Costo del Plan: <span>{`$${dataclient.price}`}</span> al mes
+          </p>
         </div>
       </div>
     </div>

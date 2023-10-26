@@ -4,7 +4,7 @@ import AtomicSelectInput from '../../Moleculas/AtomicSelectInput/AtomicSelectInp
 import AtomicButton from '../../Atomos/AtomicButton/AtomicButton'
 import AtomInput from '../../Atomos/AtomicInput/AtomicInput'
 import './Form.scss'
-import BlackCheckbox from '../../Atomos/AtomicCheck/AtomicCheck';
+import Atomiccheck from '../../Atomos/AtomicCheck/AtomicCheck';
 import React from 'react';
 
 const Form = ({ sendData, handleFieldChange }) => {
@@ -29,8 +29,8 @@ const Form = ({ sendData, handleFieldChange }) => {
         onChange={(e) => handleFieldChange('nroCell', e)}
         className="mb-24"
       />
-      <BlackCheckbox label="Acepto lo Política de Privacidad" />
-      <BlackCheckbox label="Acepto la Política Comunicaciones Comerciales" />
+      <Atomiccheck label="Acepto lo Política de Privacidad" />
+      <Atomiccheck label="Acepto la Política Comunicaciones Comerciales" />
 
       <AtomicLink msg={'Aplican Términos y Condiciones.'} />
       <AtomicButton label="Cotiza Aqui" onClick={sendData} />

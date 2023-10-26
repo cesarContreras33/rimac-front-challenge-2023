@@ -5,6 +5,7 @@ import AtomicBreadcrump from "../../Atomos/AtomicBreadcrump/AtomicBreadcrump"
 import AtomicNavBtn from "../../Atomos/AtomicNavBtn/AtomicNavBtn"
 import OrganismResumen from '../../Organismos/OrganismResumen/OrganismResumen'
 import './PageResumen.scss'
+import { useSelector } from 'react-redux'
 
 
 const PageResumen = () => {
@@ -13,11 +14,15 @@ const PageResumen = () => {
     { label: 'Resumen', num: '2', status: true }
   ])
 
+  const dataclient = useSelector((state: any) => state.client.client)
+
+  console.log(dataclient)
+
   return (
     <div className="pageresumen">
       <AtomicBreadcrump routes={routes} />
       <AtomicNavBtn />
-      <OrganismResumen/>
+      <OrganismResumen dataclient={dataclient}/>
     </div>
   )
 }

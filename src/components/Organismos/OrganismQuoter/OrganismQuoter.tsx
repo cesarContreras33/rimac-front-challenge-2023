@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React from 'react'
 import AtomicTitle from '../../Atomos/AtomicTitle/AtomicTitle'
 import AtomicDescription from '../../Atomos/AtomicDescription/AtomicDescription'
 import './OrganismQuoter.scss'
@@ -14,7 +14,8 @@ interface OrganismCuoterProps {
   optionPlans: Plan[]
   handleClickCard: (id: number) => void
   plans: ClientType[]
-  discount:boolean
+  discount: boolean
+  handleSelectPlan: (id:string) => void
 }
 
 interface Plan {
@@ -30,7 +31,8 @@ const OrganismQuoter: React.FC<OrganismCuoterProps> = ({
   optionPlans,
   handleClickCard,
   plans,
-  discount
+  discount,
+  handleSelectPlan
 }) => {
   const client = useSelector((state: any) => state.client.client)
 
@@ -67,7 +69,13 @@ const OrganismQuoter: React.FC<OrganismCuoterProps> = ({
               {plans &&
                 plans.map((plan, index) => {
                   return (
-                    <AtomCardExtend key={index} {...plan} discount={discount} />
+                    <AtomCardExtend
+                      key={index}
+                      {...plan}
+                      discount={discount}
+                      handleSelectPlan={handleSelectPlan}
+                      id={plan.name}
+                    />
                   )
                 })}
             </div>

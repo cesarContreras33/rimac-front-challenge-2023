@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import {useState,useEffect} from 'react'
 import imgFamilia from '../../../assets/images/familia.png'
 
 import AtomicPill from '../../Atomos/AtomicPill/AtomicPill'
@@ -34,14 +34,25 @@ const PageRegister = () => {
   }, [])
 
   const handleFieldChange = (field, e) => {
+    const inputString = e.target.value;
+    const newInputNumber = inputString.replace(/[^0-9]/g,'');
+    if(newInputNumber.length <= 9){
+      const update = {...formFields,[field]:e.target.value}
+      setFormFields(update)
+    }   
+  }
+
+
+
+
+/* 
+  const handleFieldChange = (field, e) => {
     const update = {...formFields,[field]:e.target.value}
     setFormFields(update) 
-  }
+  } */
 
   const sendData = async(e) => {
     e.preventDefault()
-    console.log(formFields)
-    console.log('aqui pretendo enviar los datos para actualizar el estado')
     dispatch(addInfo(formFields))
     navigate('/options')
   }

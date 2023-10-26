@@ -3,7 +3,6 @@ import './AtomCardExtend.scss'
 import house from '../../../assets/images/IcHomeLight.svg'
 import AtomicPill from '../AtomicPill/AtomicPill'
 import AtomicButton from '../AtomicButton/AtomicButton'
-import {useNavigate} from 'react-router-dom'
 import React from 'react'
 
 
@@ -12,16 +11,23 @@ interface AtomCardExtendProps {
   price?: number
   description?: string[]
   age?: number
-  discount?:boolean
+  discount?: boolean
+  handleSelectPlan:(id:string)=>void
+  id:string
 }
 
 
-const AtomCardExtend: React.FC<AtomCardExtendProps> = ({ name,price,description,discount }) => {
-  const navigator = useNavigate()
+const AtomCardExtend: React.FC<AtomCardExtendProps> = ({
+  name,
+  price,
+  description,
+  discount,
+  handleSelectPlan,
+  id
+}) => {
 
-  const onHandleClickNext = () => {
-    navigator('/resumen')
-  }
+
+  
 
   return (
     <div className="atomcard-extend">
@@ -34,8 +40,10 @@ const AtomCardExtend: React.FC<AtomCardExtendProps> = ({ name,price,description,
             <div className="atomcard-extend__content--header-price">
               <h2>{name}</h2>
               <p className="plan">costo de plan</p>
-              <p className="antes">{discount && `${price*0.95} descuento`}</p>
-              <p className="cost">{`$${price} al mes`}</p>
+              <p className="antes">{discount && `${price} descuento`}</p>
+              <p className="cost">{`$${
+                discount ? `${price * 0.95}` : price
+              } al mes`}</p>
             </div>
             <img src={house} alt="" />
           </div>
@@ -56,7 +64,7 @@ const AtomCardExtend: React.FC<AtomCardExtendProps> = ({ name,price,description,
         <div className="atomcard-extend__content--button">
           <AtomicButton
             label={'Seleccionar Plan'}
-            onClick={onHandleClickNext}
+            onClick={()=>handleSelectPlan(id)}
           />
         </div>
       </div>
