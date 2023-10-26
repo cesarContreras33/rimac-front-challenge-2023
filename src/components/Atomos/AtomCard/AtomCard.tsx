@@ -14,6 +14,7 @@ interface AtomCardProps{
 }
 
 const AtomCard:React.FC<AtomCardProps> = ({icon,title,description,status,onClick}) => {
+  const urlImg = `/src/assets/images/${icon}.svg`
   return (
     <div className="atomcard" onClick={onClick}>
       <div className="atomcard__content">
@@ -23,7 +24,7 @@ const AtomCard:React.FC<AtomCardProps> = ({icon,title,description,status,onClick
           </div>
         </div>
         <div className="atomcard__content-icon">
-          <img src={`/src/assets/images/${icon}.svg`} alt="" />
+          <img src={urlImg} alt={icon} />
         </div>
         <div className="atomcard__content-info">
           <h2>{title}</h2>
