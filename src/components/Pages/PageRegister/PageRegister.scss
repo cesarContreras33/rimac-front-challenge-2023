@@ -1,0 +1,27 @@
+.main{
+  display: flex;
+  justify-content: center;
+  width: $register-width100;
+  flex-grow: 1;
+  & .content{
+    display: flex;
+    flex-direction: row;
+    max-width: $max-width-content;
+    padding: 0px 120px;
+    width: $register-width100;
+    box-sizing: border-box;
+    margin-bottom: 77px;
+    &__left{
+      max-width: 480px;
+      width: $register-width50;
+      & img{
+        border-radius: $br-33;
+        width: $register-width100;
+      }
+    }
+    &__right{
+      padding-left: 128px;
+      width: $register-width50;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.organismquoter{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  &__content{
+    max-width: $max-width-content;
+    width: 100%;
+    text-align: center;
+    &--title{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 32px;
+      &-center{
+        width: 100%;
+        max-width: 540px;
+      }
+    }
+    & .atomicTitle{
+      h1{
+        font-family: $font2;
+        font-size: $fz-40;
+        font-weight: $fw-bold;
+        letter-spacing: $s06;
+      }
+    }
+    & .atomicdescription{
+      max-width: 100%;
+      white-space: nowrap;
+      margin-bottom: 0;
+    }
+    & h1{
+      max-width: none;
+    }
+    &-group{
+      display: flex;
+      flex-direction: column;
+      &--select{
+        display:flex;
+        flex-direction: row;
+        gap:$s32;
+        justify-content: $center;
+        margin-bottom: $s20;
+      }
+      &--options{
+        display:none;
+        &-content{
+          display: flex;
+          flex-direction: row;
+          gap:$s32;
+          justify-content: $center;
+        }
+        &.show{
+          display:block
+        }
+        &.hide{
+          display: none;
+        }
+      }
+    }
+
+  }
+}

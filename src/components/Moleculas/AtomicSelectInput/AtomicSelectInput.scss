@@ -1,0 +1,27 @@
+
+@import 'styles/scss/variables';
+
+
+.atomicSelectInput{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 24px;
+  width: $selectinput-width100;
+  max-width: 364px;
+  & select{
+    border-radius: 8px;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0px 12px;    
+    appearance: none;
+    background: url('../../../assets/images/downarrow.svg') no-repeat right center;
+    background-size: 16px 16px;
+    background-position: calc($selectinput-width100 - 16px) center;
+  }
+  & .atomicInput{
+    background-color: white;
+    border-radius: 0px 8px 8px 0px;
+    outline:$input-border;
+  }
+}
