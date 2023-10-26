@@ -35,9 +35,11 @@ const PageRegister = () => {
 
   const handleFieldChange = (field, e) => {
     const inputString = e.target.value;
-    const newInputNumber = inputString.replace(/[^0-9]/g, '');
+    const newInputNumber = inputString.replace(/[^1-9]/g,'');
+    const sanit = newInputNumber.slice(0,9)
+    e.target.value = sanit
     if(newInputNumber.length <= 9){
-      const update = {...formFields,[field]:inputString}
+      const update = { ...formFields, [field]: sanit }
       setFormFields(update)
     }   
   }

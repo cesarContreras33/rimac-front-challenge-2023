@@ -15,7 +15,7 @@ interface OrganismCuoterProps {
   handleClickCard: (id: number) => void
   plans: ClientType[]
   discount: boolean
-  handleSelectPlan: (id:string) => void
+  handleSelectPlan: (id:string,discount:boolean) => void
 }
 
 interface Plan {

@@ -3,7 +3,7 @@ import AtomicLink from '../../Atomos/AtomicLink/AtomicLink'
 import AtomicSelectInput from '../../Moleculas/AtomicSelectInput/AtomicSelectInput'
 import AtomicButton from '../../Atomos/AtomicButton/AtomicButton'
 import AtomInput from '../../Atomos/AtomicInput/AtomicInput'
-import './Form.scss'
+import './OrganismForm.scss'
 import Atomiccheck from '../../Atomos/AtomicCheck/AtomicCheck';
 import React from 'react';
 
@@ -13,6 +13,7 @@ const OrganismForm = ({ sendData, handleFieldChange }) => {
     nroDoc: '',
     nroCell: ''
   })
+
 
 
   return (
@@ -33,7 +34,7 @@ const OrganismForm = ({ sendData, handleFieldChange }) => {
       <Atomiccheck label="Acepto la Política Comunicaciones Comerciales" />
 
       <AtomicLink msg={'Aplican Términos y Condiciones.'} />
-      <AtomicButton label="Cotiza Aqui" onClick={sendData} />
+      <AtomicButton label="Cotiza Aqui" onClick={sendData}/>
     </form>
   )
 }
