@@ -89,12 +89,18 @@ const PageOptions = () => {
     }
   }
 
-  const handleSelectPlan = (id:string) => {
-      //dispatch(addInfo(formFields))
+  const handleSelectPlan = (id:string,discount:boolean) => {
       const [selectPlan] = plans.filter(plan => plan.name === id)
+      if (discount === true){
+        const newplan = {...selectPlan}
+        newplan.price*=0.95
+        dispatch(addResumen(newplan))
+        navigator('/resumen')
+      }else{
+        dispatch(addResumen(selectPlan))
+        navigator('/resumen')
+      }
       console.log(selectPlan)
-      dispatch(addResumen(selectPlan))
-      navigator('/resumen')
   }
 
 

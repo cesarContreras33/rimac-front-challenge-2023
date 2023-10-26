@@ -12,7 +12,7 @@ interface AtomCardExtendProps {
   description?: string[]
   age?: number
   discount?: boolean
-  handleSelectPlan:(id:string)=>void
+  handleSelectPlan:(id:string,discount:boolean)=>void
   id:string
 }
 
@@ -66,7 +66,7 @@ const AtomCardExtend: React.FC<AtomCardExtendProps> = ({
         <div className="atomcard-extend__content--button">
           <AtomicButton
             label={'Seleccionar Plan'}
-            onClick={() => handleSelectPlan(id)}
+            onClick={() => handleSelectPlan(id,discount)}
           />
         </div>
       </div>
