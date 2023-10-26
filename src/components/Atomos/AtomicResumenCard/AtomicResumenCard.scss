@@ -1,0 +1,71 @@
+
+.atomic-resumencard{
+  width: 100%;
+  max-width: 928px;
+  background-color: $white;
+  box-shadow: 0px 0px 32px 1px rgba(174, 172, 243, 0.3490196078);
+  padding: 24px 32px;
+  font-family: $font2;
+  box-sizing: border-box;
+  &__content{
+    display: flex;
+    flex-direction: column;
+    &--user{
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 16px;
+      border-bottom: 1px solid $N400;
+      margin-bottom: 16px;
+      & span{
+        font-size: $fz-10;
+        font-weight: $fw-bold;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        margin-bottom: $s8;
+      }
+      &-data{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        & img{
+          width: $s24;
+          height:$s20;
+        }
+        & p{
+          font-weight: $fw-bold;
+          font-size: $fz-20;
+          letter-spacing: -0.2px;
+          margin:0;
+          margin-left: 12px;
+        }
+      }
+    }
+    &--payment{
+      margin-bottom: 16px;
+      & p{
+        margin:0;
+        font-size: $fz-14;
+        margin-bottom:$s4 ;
+      }
+      & p:first-child{
+        font-size: $fz-16;
+        font-weight: $fw-bold;
+      }
+    }
+    &--plan{
+      margin-bottom: 16px;
+      & p{
+        margin:0;
+        font-size: $fz-14;
+        margin-bottom:$s4 ;
+      }
+      & p:first-child{
+        font-size: $fz-16;
+        font-weight: $fw-bold;
+      }
+    }
+  }
+}
+
+
+

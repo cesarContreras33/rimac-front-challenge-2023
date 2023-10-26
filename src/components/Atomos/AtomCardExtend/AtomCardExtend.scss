@@ -1,0 +1,110 @@
+.atomcard-extend{
+  width: 288px;
+  background-color: #fff;
+  padding:40px 32px 50px;
+  box-shadow: 0px 0px 32px 1px rgba(174, 172, 243, 0.3490196078);
+  border-radius: 24px;
+  box-sizing: border-box;
+  font-family: $font2;
+  &__content{
+    display: flex;
+    flex-direction: column;
+    &--header{
+      display: flex;
+      flex-direction: column;
+      padding-bottom: $s24;
+      border-bottom: 1px solid $N400;
+      &-pill{
+        max-width: 122px;
+        margin-bottom: 10px;
+        min-height: 24px;
+        & .atomicPill{
+          margin-bottom: 0;
+        }
+        & p{
+          font-family: $font2;
+          font-size: 12px;
+          font-weight: $fw-bold;
+          letter-spacing: $s04;
+        }
+      }
+      &-title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        & h2{
+          font-size: $s24;
+          margin:0;
+          margin-bottom: 24px;
+          letter-spacing: $s02;
+          color:$N700;
+          font-weight: $fw-bold;
+        }
+      }
+      &-price{
+        display: flex;
+        flex-direction: column;
+        & p{
+          margin:0
+        }
+        & .plan{
+          text-align: left;
+          font-size: $s12;
+          color:$N600;
+          text-transform: uppercase;
+          font-weight: $fw-bold;
+          letter-spacing: $s06;
+          margin-bottom: 4px;
+        }
+        & .antes{
+          text-align: left;
+          color:$N600;
+          font-size: $fz-14;
+          text-decoration: line-through;
+        }
+        & .cost{
+          font-weight: $fw-bold;
+          text-align: left;
+          font-size: $s20;
+          letter-spacing: $s02;
+          color: $N700;
+        }
+
+      }
+    }
+    &--list{
+      & .plan-description{
+        text-align: left;
+        padding-left: $s27;
+        display: flex;
+        flex-direction: column;
+        &__item-box{
+          font-weight: $fw-normal;
+          font-size: $fz-16;
+          line-height: 28px;
+          letter-spacing: .1px;
+          & p::first-line{
+            font-weight: bold;
+          }
+        }
+      }
+
+    }
+    &--button{
+      & .atomicButton{
+        width: 100%;
+        background-color: $R500;
+        font-family: $font2;
+        font-weight: $fw-bold;
+        font-size: $fz-18;
+        letter-spacing: $s04;
+        height: 48px;
+        cursor: pointer;
+        &:hover{
+          box-shadow: 0px 0px 7px 1px rgba(174, 172, 243, 0.8);
+        }
+      }
+    }
+  }
+}

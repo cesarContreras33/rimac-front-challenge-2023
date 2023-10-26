@@ -1,0 +1,18 @@
+@import 'styles/scss/variables';
+
+.atomiclink{
+  font-family: $link-font;
+  & p{
+    font-size: $link-font-size;
+    font-weight: $link-font-weight;
+    line-height: $link-font-height;
+    letter-spacing: $link-font-spacing;
+    color:$link-font-color;
+    margin: 0;
+    margin-bottom: 24px;
+    & a{
+      color:$link-font-color
+    }
+  }
+}
+

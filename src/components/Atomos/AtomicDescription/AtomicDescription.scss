@@ -1,0 +1,18 @@
+@import 'styles/scss/variables';
+
+.atomicdescription{
+  width: $description-width;
+  max-width:352px;
+  margin-bottom: $s24;
+  & p{
+    font-family: $description-font;
+    text-transform:initial;
+    font-size: $description-font-size;
+    font-weight: $description-font-weight;
+    line-height: $s20;
+    letter-spacing: $description-letter-spacing;
+    margin: $s0;
+  }
+}
+
+

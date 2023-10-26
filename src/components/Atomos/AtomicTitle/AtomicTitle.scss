@@ -1,0 +1,16 @@
+
+@import 'styles/scss/variables';
+
+.atomicTitle{
+  margin-bottom: $s8;
+  & h1{
+    width: 100%;
+    max-width: 352px;
+    font-family: $title-font;
+    font-weight: $title-bold;
+    font-size: $title-font-size;
+    color:$title-font-color;
+    line-height: $title-line-height;
+    margin: $s0;
+  }
+}

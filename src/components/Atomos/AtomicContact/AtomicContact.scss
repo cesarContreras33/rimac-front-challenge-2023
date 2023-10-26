@@ -1,0 +1,31 @@
+.atomicContact{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 305px;
+  height: 60px;
+  font-family: $font1;
+  & p{
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    font-weight: $fw-bold;
+    margin: 0;
+  }
+  &__phone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    & img{
+      width: 15px;
+      height: 15px;
+    }
+    & p{
+      color:$grey-100;
+      font-size: $fz-18;
+      font-weight: $fw-bold;
+      letter-spacing: $s04;
+    }
+  }
+}

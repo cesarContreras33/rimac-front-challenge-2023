@@ -1,0 +1,21 @@
+@import 'styles/scss/variables';
+
+.atomicPill{
+  display:flex;
+  justify-content: $center;
+  align-items: $center;
+  max-width: 172px;
+  width: 100%;
+  height:24px;
+  background: linear-gradient(to bottom, $grad1, $grad2);
+  border-radius: $pill-radius;
+  box-sizing: border-box;
+  margin-bottom: $s16;
+  & p{
+    font-family: $pill-font;
+    font-weight: $fw-bold;
+    font-size: $pill-font-size;
+    letter-spacing: $pill-spacing;
+    text-transform: $capitalize;
+  }
+}

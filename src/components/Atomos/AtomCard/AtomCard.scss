@@ -1,0 +1,70 @@
+.atomcard{
+  width: 256px;
+  height: 212px;
+  box-shadow: 0px 0px 32px 1px rgba(174, 172, 243, 0.3490196078);
+  // estilos para cuando se le de click
+  /*   box-shadow: none;
+  border: 3px solid $grey-100; */
+  border-radius: 24px;
+  padding: 16px 24px 40px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: .3s ease all;
+  &__content{
+    display: flex;
+    flex-direction: column;
+    &-check{
+      width: 100%;
+      height: auto;
+      display:flex;
+      justify-content: flex-end;
+      & .check{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        border:1px solid #A9AFD9;
+        &.active{
+          background-color: $S300;
+        }
+        //estilos para cuando se le de click al
+        /*         border: none;
+        background-color: $S300;
+        & img{
+          width: .8rem;
+        } */
+      }
+    }
+    &-icon{
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 8px;
+      & img{
+        width: 48px;
+      }
+    }
+    &-info{
+      font-family: $font2;
+      color: $N700;
+      & h2{
+        margin: 0;
+        font-size: $s20;
+        text-align: left;
+        margin-bottom: 8px;
+      }
+      & p{
+        margin: 0;
+        font-size: $fz-12;
+        text-align: left;
+        line-height: $s20;
+        font-weight: $fw-normal;
+        letter-spacing: $s02;
+      }
+    }
+  }
+  &:hover{
+    box-shadow: 0px 0px 12px 1px rgba(174, 172, 243, 0.3490196078);
+  }
+}
