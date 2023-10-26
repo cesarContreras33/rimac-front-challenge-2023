@@ -14,6 +14,8 @@ export type ClientType = {
   tipoDoc?: string
   nroDoc?: string
   nroCell?: string
+  plan?: string
+  price?: number
 }
 
 export type PlansType = {
@@ -21,4 +23,15 @@ export type PlansType = {
   price:number
   description:string[]
   age:number
+}
+
+export interface DataClient {
+  name: string
+  lastName: string
+  birthDay: string
+  tipoDoc: string
+  nroDoc: string
+  nroCell: string
+  plan: string
+  price: number
 }

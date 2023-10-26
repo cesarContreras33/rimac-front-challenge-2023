@@ -15,7 +15,9 @@ const initialState = {
     birthDay: '',
     tipoDoc: '',
     nroDoc: '',
-    nroCell:''
+    nroCell:'',
+    plan:'',
+    price:''
   }
 }
 
@@ -35,6 +37,11 @@ export const clientSlice = createSlice({
       state.client.nroDoc = nroDoc
       state.client.nroCell = nroCell
     },
+    addResumen: (state, action) => {
+      const {name,price} = action.payload
+      state.client.plan = name;
+      state.client.price = price
+    },
   },
 /*   extraReducers: (builder) => {
     builder
@@ -48,7 +55,7 @@ export const clientSlice = createSlice({
   } */
 })
 
-export const { addClient,addInfo } = clientSlice.actions
+export const { addClient,addInfo,addResumen } = clientSlice.actions
 export default clientSlice.reducer;
 
 

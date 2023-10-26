@@ -1,6 +1,6 @@
 
 
-export const calcularEdad = (fechaNacimiento) => {
+export const calcularEdad = async(fechaNacimiento) => {
   const partesFecha = fechaNacimiento.split('-');
   if (partesFecha.length !== 3) {
     throw new Error('El formato de fecha debe ser "DD-MM-AAAA"');
@@ -14,7 +14,7 @@ export const calcularEdad = (fechaNacimiento) => {
   const edadDif = Date.now() - fechaNacimientoDate.getTime();
   const edadFecha = new Date(edadDif);
 
-  return Math.abs(edadFecha.getUTCFullYear() - 1970);
+  return await Math.abs(edadFecha.getUTCFullYear() - 1970);
 }
 
 
