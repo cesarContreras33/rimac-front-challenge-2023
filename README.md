@@ -10,11 +10,11 @@ Simplemente ingresando tu nro de DNI, tu nro de celular y un simple clic a 'Coti
 
 
 ## DESCRIPCION DEL PROBLEMA (MEJORAR)
-Muchas veces nuestros potenciales clientes no entienden  el uso de las aplicaciones por lo que terminan abandonando la aplicacion debido a una interfase engorrosa, aburrida y dificil de entender lo que nos lleva a perder un potencial cliente. generan desconfianza
+Muchas veces nuestros potenciales clientes no entienden  el uso de las aplicaciones por lo que terminan abandonando la aplicacion debido a una interfase engorrosa, aburrida y dificil de entender lo que nos lleva a perder un potencial cliente.
 
 
 ## SOLUCION PROPUESTA
-Esta propuesta de proyecto simplifica la cotizacion de seguros de vida de manera directa y sencilla. 
+Esta propuesta de proyecto simplifica la cotizacion de seguros de vida de manera directa y sencilla. basicamente nos 
 
 
 ## ANALISIS DEL PROYECTO
