@@ -4,7 +4,7 @@ import imgFamilia from '../../../assets/images/familia.png'
 import AtomicPill from '../../Atomos/AtomicPill/AtomicPill'
 import AtomicTitle from '../../Atomos/AtomicTitle/AtomicTitle'
 import AtomicDescription from '../../Atomos/AtomicDescription/AtomicDescription'
-import Form from '../../Organismos/Form/Form'
+import OrganismForm from '../../Organismos/Form/OrganismForm'
 
 import './PageRegister.scss'
 import { fetchClient } from '../../../api/apiUser'
@@ -35,21 +35,12 @@ const PageRegister = () => {
 
   const handleFieldChange = (field, e) => {
     const inputString = e.target.value;
-    const newInputNumber = inputString.replace(/[^0-9]/g,'');
+    const newInputNumber = inputString.replace(/[^0-9]/g, '');
     if(newInputNumber.length <= 9){
-      const update = {...formFields,[field]:e.target.value}
+      const update = {...formFields,[field]:inputString}
       setFormFields(update)
     }   
   }
-
-
-
-
-/* 
-  const handleFieldChange = (field, e) => {
-    const update = {...formFields,[field]:e.target.value}
-    setFormFields(update) 
-  } */
 
   const sendData = async(e) => {
     e.preventDefault()
@@ -71,7 +62,7 @@ const PageRegister = () => {
               'Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra asesoría. 100% online.'
             }
           />
-          <Form sendData={sendData} handleFieldChange={handleFieldChange} />
+          <OrganismForm sendData={sendData} handleFieldChange={handleFieldChange} />
         </div>
       </div>
     </div>
