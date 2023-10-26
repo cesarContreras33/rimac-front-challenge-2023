@@ -1,5 +1,5 @@
  
-import {render,screen,fireEvent} from '@testing-library/react'
+import {render,screen} from '@testing-library/react'
 import AtomicCheck from './AtomicCheck'
 
 describe('checkbox testing',()=>{
