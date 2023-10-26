@@ -37,10 +37,10 @@ Tiene por finalidad registrar a un posible cliente el cual puede:
    6. boton "Cotizar Aqui".
 
 
-
-
-
 ### PLANES
+Para este proyecto le estoy prestando interes a la aplicaicon de TDD (trst-driven development)
+
+
 ### RESUMEN
 
 
@@ -49,22 +49,16 @@ Debido a la naturaleza del entorno en el que vivira la aplicacion, navegador, se
 
 1. Javascript como lenguaje de programacion 
 2. Libreria React/React-DOM 
-3. Gulp - automatizador de tareas
-4. typescript para el tipado de js
-5. sass como preprocesador de css
-6. react-router-dom para la navegacion entre componentes
-
+2. Libreria React-router-dom 
+3. typescript para el tipado de js
+4. sass como preprocesador de css
+5. react-router-dom para la navegacion entre componentes
+6. redux-toolkit
 
 
 ## LINEAS DE INSTALACION
 
-### AUTOMATIZADOR DE TAREAS GULP
-```js
-npm install -g gulp
-npm install -D gulp
-npm install -d gulp-sass
 
-```
 
 ### TESTING CON JEST Y TESTING LIBRARY
 ```js
@@ -128,31 +122,23 @@ RIMAC-FRONTEND-CHALLENGE/
 │   │   │    ├── BRSonoma-Thin.otf
 │   │   │    └── Lato-Bold.ttf
 │   ├── components/
-│   │   ├── SeguroSalud.tsx
-│   │   ├── Planes.tsx
-│   │   └── Resumen.tsx
+│   │   ├── Atomos
+│   │   ├── Moleculas
+│   │   ├── Organismos
+│   │   ├── Pages
+│   │   └── Template
+│   │         ├── Template1
+│   │         └── Template2
 │   │
-│   ├── containers/ (contenedores de componentes)
+│   ├── redux
+│   │     ├── slices
+│   │            ├── clientSlice
+│   │            └── plansSlice
+│   │
 │   ├── styles
 │   │   ├── scss
-│   │   │    ├── main.scss(header/footer)
-│   │   │    ├── variables.scss
-│   │   │    ├── globals.scss
-│   │   │    ├── forms.scss
-│   │   │    ├── interfaces
-│   │   │    │      ├── healthInsurance.scss
-│   │   │    │      ├── plans.scss
-│   │   │    │      └── summary.scss
-│   │   │    └── components
-│   │   │           ├── formulary.scss
-│   │   │           ├── optionPlanType.scss
-│   │   │           ├── optionPlan.scss
-│   │   │           └── summaryBox.scss
-│   │   └── css
-│   │        ├── main.css
-│   │        ├── seguroSalud.css
-│   │        ├── planes.css
-│   │        └── resumen.css
+│   │        ├── variables.scss
+│   │        ├── globals.scss
 │   │
 │   ├── utils/ (funciones y utilidades reutilizables)
 │   ├── services
@@ -164,20 +150,14 @@ RIMAC-FRONTEND-CHALLENGE/
 │   ├── index.js
 │   ├── index.css (estilos globales)
 │   │
-│   ├── routes/ (si se utiliza enrutamiento)
-│   │   ├── Route1.js
-│   │   ├── Route2.js
-│   │   └── ...
+│   ├── services
 │   │
-│   ├── context/ (si se utiliza el contexto de React)
-│   │   ├── AppContext.js
-│   │   └── ...
+│   ├── types
 │   │
 │   ├── assets/ ()
 │   │
 │   ├── config/ (configuración de la aplicación)
 │   │
-│   ├── translations/ (archivos de internacionalización)
 │   └── vite-env.d.ts
 │
 ├── .eslintrc (configuración de ESLint)
@@ -195,3 +175,11 @@ RIMAC-FRONTEND-CHALLENGE/
 []
 
 ## ESTRUCTURA DE CARPETAS UTILIZADA
+
+se tomo en cuenta emplear una estructura centrada en TDD , o seaun enfoque a aplicar test a los componentes y para la componetizacion se esta empleando atom design
+
+
+
+
+
+
