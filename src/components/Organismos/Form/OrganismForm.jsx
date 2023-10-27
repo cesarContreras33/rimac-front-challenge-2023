@@ -26,7 +26,7 @@ const OrganismForm = ({ sendData, handleFieldChange }) => {
       />
       <AtomInput
         label="Celular"
-        value={formFields.nroCell}
+        value={formFields.nroPhone}
         onChange={(e) => handleFieldChange('nroCell', e)}
         className="mb-24"
       />
