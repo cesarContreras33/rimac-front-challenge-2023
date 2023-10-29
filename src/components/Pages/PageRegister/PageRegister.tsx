@@ -58,7 +58,9 @@ const PageRegister = () => {
           <div className="content__right--form-group">
             <div className="form-group">
               <AtomicPill message={'Seguro Salud Flexible'} />
-              <AtomicTitle msg={'Creado para ti y tu familia'} />
+              <AtomicTitle
+                msg={'Creado para ti y tu familia'}
+              />
             </div>
             <img src={imgFamilia} alt="" />
           </div>

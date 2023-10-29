@@ -9,6 +9,7 @@ select {
   font-size: $select-fz16;
   color: #333;
   cursor: pointer;
+  min-width: 88px;
 
   &:hover {
     border-color: #999;
@@ -20,3 +21,10 @@ select {
     box-shadow: $select-none;
   }
 }
+
+@media ($mmx: $brp) {
+  select{
+    max-width: 170px;
+  }
+}
+

@@ -25,6 +25,12 @@
       width: $register-width50;
       &--form{
         &-group{
+          display:flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding-bottom:unset;
+          border-bottom: unset;
+          margin-bottom: unset;
           & .form-group{
             display:flex;
             flex-direction: column;
@@ -51,6 +57,21 @@
       &__right{
         width: 100%;
         padding-left: unset;
+        &--form{
+          &-group{
+           padding-bottom: $s24;
+           border-bottom: 1px solid $grey-30;
+           margin-bottom: $s24;
+           gap:$s12;
+            & img{
+              display:block;
+              width: 100%;
+              max-width: 136px;
+              border-radius: $s20;
+              object-fit: cover;
+            }
+          }
+        }
       }
     }
   }

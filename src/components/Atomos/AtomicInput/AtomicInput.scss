@@ -39,7 +39,8 @@
 
 @media ($mmx: $brp) {
   .atomicInput{
-    max-width: unset
+    min-width: 156px;
+    max-width: unset;
   }
 }
 

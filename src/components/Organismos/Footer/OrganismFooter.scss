@@ -30,9 +30,18 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    & img{
-      width: 85px;
-      height: 42px;
+    &--images{
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      & .logo-white-v1{
+        width: 85px;
+        height: 42px;
+        display:block;
+      }
+      & .logo-white-v2{
+        display:none;
+      }
     }
     & p{
       color:$grey-10;
@@ -52,8 +61,16 @@
     &__content{
       flex-direction: column;
       padding: 32px 24px;
-      & img{
-        margin-bottom: $s24;
+      &--images{
+        justify-content: center;
+        border-bottom: 1px solid $grey-80;
+        & .logo-white-v1{
+          display:none;
+        }
+        & .logo-white-v2{
+          display:block;
+          margin-bottom: $s24;
+        }
       }
       & p{
         margin-top: $s24;

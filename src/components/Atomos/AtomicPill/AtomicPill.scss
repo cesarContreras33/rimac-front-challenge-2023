@@ -19,3 +19,14 @@
     text-transform: $capitalize;
   }
 }
+
+@media ($mmx: $brp) {
+  .atomicPill{
+    & p{
+      font-size: $fz-10;
+    }
+
+  }
+}
+
+
