@@ -4,7 +4,7 @@ import './LayoutTemplateWithoutFooter.scss'
 
 const LayoutTemplateWithoutFooter = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="layout-template">
+    <div className="layout-template-without">
       <OrganismHeader />
       <main className="main">{children}</main>
     </div>

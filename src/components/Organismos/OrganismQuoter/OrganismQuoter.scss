@@ -27,6 +27,7 @@
       max-width: 100%;
       white-space: nowrap;
       margin-bottom: 0;
+      color:$N700;
     }
     & h1{
       max-width: none;
@@ -59,4 +60,38 @@
     }
 
   }
+}
+
+
+@media ($mmx: $brp) {
+  .organismquoter{
+    padding:32px 24px;
+    box-sizing: border-box;
+    & .atomicTitle{
+      h1{
+        text-align: left;
+        font-size: $s28;
+        line-height: $s36;
+        letter-spacing: $s02;
+      }
+    }
+    & .atomicdescription{
+      white-space:unset;
+      text-align: $left;
+      line-height: $s28;
+      font-size: $fz-16;
+    }
+    &__content{
+      &-group{
+        &--select{
+          flex-direction: column
+        }
+        &--options{
+          &-content{
+            flex-direction: column
+          }
+        }
+      }
+    }
+  };
 }

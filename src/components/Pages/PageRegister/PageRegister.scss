@@ -8,6 +8,7 @@
     flex-direction: row;
     max-width: $max-width-content;
     padding: 0px 120px;
+    padding:32px;
     width: $register-width100;
     box-sizing: border-box;
     margin-bottom: 77px;
@@ -22,6 +23,35 @@
     &__right{
       padding-left: 128px;
       width: $register-width50;
+      &--form{
+        &-group{
+          & .form-group{
+            display:flex;
+            flex-direction: column;
+          }
+          & img{
+            display:none
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media ($mmx: $brp) {
+  .main{
+    & .content{
+      flex-direction: column;
+      padding: 0px 24px;
+      &__left{
+        display:none
+      }
+      &__right{
+        width: 100%;
+        padding-left: unset;
+      }
     }
   }
 }

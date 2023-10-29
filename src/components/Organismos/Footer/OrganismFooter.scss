@@ -12,7 +12,7 @@
     flex-direction: row;
     justify-content: space-between;
     max-width: 1360px;
-    padding: 0px 120px;
+    padding: 0px 32px;
     width: 100%;
     box-sizing: border-box;
     &img{
@@ -42,4 +42,22 @@
       margin: $s0;
     }
   }
-}  
+} 
+
+
+
+@media ($mmx: $brp) {
+  .footer{
+    height: auto;;
+    &__content{
+      flex-direction: column;
+      padding: 32px 24px;
+      & img{
+        margin-bottom: $s24;
+      }
+      & p{
+        margin-top: $s24;
+      }
+    }
+  }
+}

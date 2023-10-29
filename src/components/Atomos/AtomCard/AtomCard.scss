@@ -44,16 +44,18 @@
       & img{
         width: 48px;
       }
-    }
-    &-info{
-      font-family: $font2;
-      color: $N700;
       & h2{
+        font-family: $font2;
+        color: $N700;
         margin: 0;
         font-size: $s20;
         text-align: left;
         margin-bottom: 8px;
       }
+    }
+    &-info{
+      font-family: $font2;
+      color: $N700;
       & p{
         margin: 0;
         font-size: $fz-12;
@@ -67,4 +69,28 @@
   &:hover{
     box-shadow: 0px 0px 12px 1px rgba(174, 172, 243, 0.3490196078);
   }
+}
+
+
+@media ($mmx: $brp) {
+  .atomcard{
+    width: 100%;
+    padding:16px 24px 40px;
+    height:auto;
+    &__content{
+      &-icon{
+        align-items: center;
+        & img{
+          width: $s32;
+          height: $s32;
+        }
+        & h2{
+          font-size: $s20;
+          margin-bottom: 0;
+          font-weight: $fw-bold;
+          margin-left: $s8;
+        }
+      }
+    }
+  };
 }

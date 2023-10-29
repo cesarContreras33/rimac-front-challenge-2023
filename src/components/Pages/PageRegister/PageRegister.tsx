@@ -4,7 +4,7 @@ import imgFamilia from '../../../assets/images/familia.png'
 import AtomicPill from '../../Atomos/AtomicPill/AtomicPill'
 import AtomicTitle from '../../Atomos/AtomicTitle/AtomicTitle'
 import AtomicDescription from '../../Atomos/AtomicDescription/AtomicDescription'
-import OrganismForm from '../../Organismos/Form/OrganismForm'
+import OrganismForm from '../../Organismos/OrganismForm/OrganismForm'
 
 import './PageRegister.scss'
 import { fetchClient } from '../../../api/apiUser'
@@ -33,19 +33,30 @@ const PageRegister = () => {
     getData()
   }, [])
 
-  const handleFieldChange = (field, e) => {
+/*   const handleFieldChange = (field, e) => {
     const inputString = e.target.value;
-    const newInputNumber = inputString.replace(/[^1-9]/g,'');
-    const sanit = newInputNumber.slice(0,9)
-    e.target.value = sanit
-    if(newInputNumber.length <= 9){
-      const update = { ...formFields, [field]: sanit }
+
+    if (inputString.length <= 9) {
+      const update = { ...formFields, [field]: inputString }
       setFormFields(update)
     }   
+  } */
+
+   const handleFieldChange = (field, valor) => {
+   console.log("🚀 ~ file: PageRegister.tsx:46 ~ handleFieldChange ~ field:", field)
+   console.log("🚀 ~ file: PageRegister.tsx:46 ~ handleFieldChange ~ valor:", valor)
+
+
+    
+    const update = { ...formFields, [field]: valor }
+    setFormFields(update)
+
   }
 
-  const sendData = async(e) => {
-    e.preventDefault()
+
+  const sendData = (event) => {
+    event.preventDefault()
+    console.log('clic')
     dispatch(addInfo(formFields))
     navigate('/options')
   }
@@ -57,14 +68,22 @@ const PageRegister = () => {
       </div>
       <div className="content__right">
         <div className="content__right--form">
-          <AtomicPill message={'Seguro Salud Flexible'} />
-          <AtomicTitle msg={'Creado para ti y tu familia'} />
+          <div className="content__right--form-group">
+            <div className="form-group">
+              <AtomicPill message={'Seguro Salud Flexible'} />
+              <AtomicTitle msg={'Creado para ti y tu familia'} />
+            </div>
+            <img src={imgFamilia} alt="" />
+          </div>
           <AtomicDescription
             msg={
               'Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra asesoría. 100% online.'
             }
           />
-          <OrganismForm sendData={sendData} handleFieldChange={handleFieldChange} />
+          <OrganismForm
+            sendData={sendData}
+            handleFieldChange={handleFieldChange}
+          />
         </div>
       </div>
     </div>

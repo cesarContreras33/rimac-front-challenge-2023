@@ -6,7 +6,7 @@ import './LayoutTemplateWithFooter.scss'
 
 const LayoutTemplateWithFooter = ({children}:{children:ReactNode}) => {
   return (
-    <div className="layout-template">
+    <div className="layout-template-with">
       <OrganismHeader />
 
       <main className="main">{children}</main>

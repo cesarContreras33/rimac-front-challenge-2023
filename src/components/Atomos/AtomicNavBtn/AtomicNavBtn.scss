@@ -44,5 +44,12 @@
       color:$black;
     }
   }
+}
 
+//media queries @
+
+@media ($mmx: $brp) {
+  .atomicnavbutton{
+    display:none
+  }
 }

@@ -3,7 +3,7 @@ import './AtomicButton.scss'
 
 interface AtomicButtonProps{
   label:string;
-  onClick:() => void;
+  onClick:(e?) => void
 }
 
 

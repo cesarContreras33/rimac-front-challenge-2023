@@ -8,14 +8,14 @@ import './AtomicSelectInput.scss'
 interface AtomicSelectInputProps{
   options: string[]
   label:string,
-  onChangeSelect:() => void,
+  onChangeSelect:(e:React.ChangeEvent<HTMLSelectElement>) => void,
   onChangeInput:(e:React.ChangeEvent<HTMLInputElement>) => void,
   docNumber:number
 }
 
 const AtomicSelectInput: React.FC<AtomicSelectInputProps> = ({
-  options,
   label,
+  options,
   onChangeSelect,
   onChangeInput,
   docNumber

@@ -25,9 +25,9 @@ const AtomCard:React.FC<AtomCardProps> = ({icon,title,description,status,onClick
         </div>
         <div className="atomcard__content-icon">
           <img src={urlImg} alt={icon} />
+          <h2>{title}</h2>
         </div>
         <div className="atomcard__content-info">
-          <h2>{title}</h2>
           <p>{description}</p>
         </div>
       </div>

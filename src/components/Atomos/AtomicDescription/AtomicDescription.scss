@@ -15,4 +15,13 @@
   }
 }
 
+@media ($mmx: $brp) {
+  .atomicdescription{
+    max-width: unset;
+    & p{
+      font-weight:$fw-bold;
+    }
+  }
+}
+
 

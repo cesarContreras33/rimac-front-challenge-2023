@@ -13,7 +13,7 @@
     justify-content: $header-sb;
     align-items: $header-center;
     max-width: $max-width-content;
-    padding: 0px 120px;
+    padding: 0px 32px;
     width: $header-width;
     box-sizing: border-box;
     &img{
@@ -24,4 +24,14 @@
       margin: 0;
     }
   }
+}
+
+
+@media ($mmx: $brp) {
+  .header{
+    &__content{
+      flex-direction: row;
+      padding:0 24px;
+    }
+  };
 }

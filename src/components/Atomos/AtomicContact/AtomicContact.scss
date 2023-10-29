@@ -29,3 +29,16 @@
     }
   }
 }
+
+@media ($mmx: $brp) {
+  .header{
+    &__content{
+      & .atomicContact{
+        justify-content: flex-end;
+        &>p{
+          display:none
+        }
+      }
+    }
+  };
+}

@@ -4,12 +4,12 @@ import './AtomicSelect.scss'
 
 interface AtomicSelectProps extends SelectHTMLAttributes<HTMLSelectElement>{
   options:string[],
-  onChange:()=>void
+  onChange:(e:React.ChangeEvent<HTMLSelectElement>)=>void
 }
 
-const AtomicSelect: React.FC<AtomicSelectProps> = ({ options,onChange,...rest }) => {
+const AtomicSelect: React.FC<AtomicSelectProps> = ({ options,onChange}) => {
   return (
-    <select {...rest} onChange={onChange}>
+    <select onChange={onChange}>
       {options.map((option, index) => (
         <option key={index} value={option}>
           {option}
