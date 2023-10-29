@@ -168,8 +168,8 @@ RIMAC-FRONTEND-CHALLENGE/
 ├── tsconfig.json
 ├── tsconfig.node.json
 ├── vite.config.ts
-├── .prettierrc (configuración de Prettier) (QUITAR!!)
-├── .babelrc (configuración de Babel) (QUITAR!!!)
+├── .prettierrc (configuración de Prettier)
+├── .babelrc (configuración de Babel) 
 
 
 se tomo en cuenta emplear una estructura centrada en TDD , o seaun enfoque a aplicar test a los componentes y para la componetizacion se esta empleando atom design
