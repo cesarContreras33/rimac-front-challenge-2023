@@ -10,6 +10,10 @@
   box-sizing: border-box;
   cursor: pointer;
   transition: .3s ease all;
+  border: 3px solid $transparent;
+  &.active{
+    border: 3px solid $grey-100;
+  }
   &__content{
     display: flex;
     flex-direction: column;
@@ -69,9 +73,7 @@
   &:hover{
     box-shadow: 0px 0px 12px 1px rgba(174, 172, 243, 0.3490196078);
   }
-  &:active{
-    border:3px solid black;
-  }
+
 }
 
 

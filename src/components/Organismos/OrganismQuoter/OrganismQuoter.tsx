@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AtomicTitle from '../../Atomos/AtomicTitle/AtomicTitle'
 import AtomicDescription from '../../Atomos/AtomicDescription/AtomicDescription'
 import './OrganismQuoter.scss'
@@ -32,11 +32,12 @@ const OrganismQuoter: React.FC<OrganismCuoterProps> = ({
   handleClickCard,
   plans,
   discount,
-  handleSelectPlan
+  handleSelectPlan,
 }) => {
   const client = useSelector((state: any) => state.client.client)
 
   const optionsSelected = optionPlans.some((plan) => plan.status)
+  //const [activeCard, setActiveCard] = useState(null)
 
   return (
     <div className="organismquoter">

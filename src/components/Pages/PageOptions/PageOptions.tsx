@@ -11,6 +11,7 @@ import { AppState} from '../../../types/types'
 import { useNavigate } from 'react-router-dom'
 import {calcularEdad} from '../../../../utils/utils'
 import { addResumen } from '../../../redux/slices/clientSlice'
+import AtomicStep from '../../Atomos/AtomicStep/AtomicStep'
 
 const PageOptions = () => {
 
@@ -46,6 +47,7 @@ const PageOptions = () => {
   const navigator = useNavigate()
   const plans = useSelector((state:AppState) => state.plans.list.list)
   const client = useSelector((state: any) => state.client.client)
+
 
   const plansFiltered = plans && plans.filter((plan) => plan.age > age)
 
@@ -107,6 +109,7 @@ const PageOptions = () => {
   return (
     <div className="pageoptions">
       <AtomicBreadcrump routes={routes} />
+      <AtomicStep routes={routes}/>
       <AtomicNavBtn />
       <OrganismQuoter
         optionPlans={optionPlans}
