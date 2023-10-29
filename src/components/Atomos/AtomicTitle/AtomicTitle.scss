@@ -14,3 +14,12 @@
     margin: $s0;
   }
 }
+
+@media($mmx: $brp){
+  .atomicTitle{
+    & h1{
+      width: auto;
+      padding:0px 20px;
+    }
+  }
+}
