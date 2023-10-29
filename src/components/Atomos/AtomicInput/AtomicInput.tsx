@@ -8,16 +8,16 @@ interface InputFormProps {
   numbersRestrictions?: (text:string)=> void
 }
 
-const AtomicInput: React.FC<InputFormProps> = ({ label,name, onValueChange,/* numbersRestrictions  */}) => {
+const AtomicInput: React.FC<InputFormProps> = ({ label,name, onValueChange}) => {
   const [inputValue, setInputValue] = useState('')
 
   const onInputChange = async (e) => {
     const value = e.target.value
-    //const newValue = numbersRestrictions(value)
     const newValue = await value.replace(/[^0-9]/g,'')
     setInputValue(newValue)
     onValueChange(name, newValue)
   }
+  
 
   return (
     <div className="atomicInput">

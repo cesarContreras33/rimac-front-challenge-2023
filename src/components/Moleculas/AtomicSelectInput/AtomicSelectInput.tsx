@@ -5,26 +5,34 @@ import AtomicSelect from '../../Atomos/AtomicSelect/AtomicSelect'
 import './AtomicSelectInput.scss'
 
 
-interface AtomicSelectInputProps{
+interface AtomicSelectInputProps {
+  label: string
   options: string[]
-  label:string,
-  onChangeSelect:(e:React.ChangeEvent<HTMLSelectElement>) => void,
-  onChangeInput:(e:React.ChangeEvent<HTMLInputElement>) => void,
-  docNumber:number
+  onChangeSelect: (e) => void
+  onChangeInput: (e: React.ChangeEvent<HTMLInputElement>) => void
+  handleFieldChange: (inputName, inputValue) => void
 }
 
 const AtomicSelectInput: React.FC<AtomicSelectInputProps> = ({
   label,
   options,
   onChangeSelect,
-  onChangeInput,
-  docNumber
+  handleFieldChange
 }) => {
-  
+
+
+  const onValueChange = (inputName: string, inputValue: string) => {
+    handleFieldChange(inputName, inputValue)
+  }
+
   return (
     <div className="atomicSelectInput">
       <AtomicSelect options={options} onChange={onChangeSelect} />
-      <AtomicInput label={label} value={docNumber} onChange={onChangeInput} />
+      <AtomicInput
+        label={label}
+        name="nroDoc"
+        onValueChange={onValueChange}
+      />
     </div>
   )
 }

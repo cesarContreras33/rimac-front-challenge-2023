@@ -33,24 +33,11 @@ const PageRegister = () => {
     getData()
   }, [])
 
-/*   const handleFieldChange = (field, e) => {
-    const inputString = e.target.value;
-
-    if (inputString.length <= 9) {
-      const update = { ...formFields, [field]: inputString }
-      setFormFields(update)
-    }   
-  } */
-
-   const handleFieldChange = (field, valor) => {
-   console.log("🚀 ~ file: PageRegister.tsx:46 ~ handleFieldChange ~ field:", field)
-   console.log("🚀 ~ file: PageRegister.tsx:46 ~ handleFieldChange ~ valor:", valor)
 
 
-    
+   const handleFieldChange = (field, valor) => { 
     const update = { ...formFields, [field]: valor }
     setFormFields(update)
-
   }
 
 
