@@ -41,7 +41,6 @@ const OrganismForm: React.FC<OrganismFormProps> = ({
         onChangeSelect={onHandleChangeSelect}
         onChangeInput={onHandleChangeInput}
         handleFieldChange={handleFieldChange}
-        /*    docNumber={formFields.nroDoc} */
       />
       <AtomInput label="Celular" name="nroCell" onValueChange={onValueChange} />
       <Atomiccheck label="Acepto lo Política de Privacidad" />
