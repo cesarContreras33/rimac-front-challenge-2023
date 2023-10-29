@@ -1,10 +1,7 @@
 .atomcard{
   width: 256px;
   height: 212px;
-  box-shadow: 0px 0px 32px 1px rgba(174, 172, 243, 0.3490196078);
-  // estilos para cuando se le de click
-  /*   box-shadow: none;
-  border: 3px solid $grey-100; */
+  box-shadow: 0px 0px 32px 1px $shadow;
   border-radius: 24px;
   padding: 16px 24px 40px;
   box-sizing: border-box;
@@ -29,16 +26,10 @@
         width: 20px;
         height: 20px;
         border-radius: 50px;
-        border:1px solid #A9AFD9;
+        border:1px solid $N500;
         &.active{
           background-color: $S300;
         }
-        //estilos para cuando se le de click al
-        /*         border: none;
-        background-color: $S300;
-        & img{
-          width: .8rem;
-        } */
       }
     }
     &-icon{
@@ -71,7 +62,7 @@
     }
   }
   &:hover{
-    box-shadow: 0px 0px 12px 1px rgba(174, 172, 243, 0.3490196078);
+    box-shadow: 0px 0px 12px 1px $shadow;
   }
 
 }
