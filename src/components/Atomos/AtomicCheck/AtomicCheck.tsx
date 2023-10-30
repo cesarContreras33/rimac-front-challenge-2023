@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './AtomicCheck.scss'
 
-const AtomicCheck = ({ label }) => {
+const AtomicCheck = ({ label,name, handleChecked }) => {
   const [checked, setChecked] = useState(false)
-
   const toggleCheckbox = () => {
-    setChecked(!checked)
+    const currentChecked = !checked
+    setChecked(currentChecked)
+    handleChecked(name,currentChecked)
   }
 
   return (

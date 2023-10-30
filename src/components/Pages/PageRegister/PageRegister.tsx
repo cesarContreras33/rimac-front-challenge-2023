@@ -16,7 +16,9 @@ import { useNavigate } from 'react-router-dom'
 const initialFormField = {
   tipoDoc:'DNI',
   nroDoc:'',
-  nroCell:''
+  nroCell:'',
+  polPriv:false,
+  polCom:false
 }
 
 const PageRegister = () => {
@@ -33,6 +35,10 @@ const PageRegister = () => {
     getData()
   }, [])
 
+  useEffect(()=>{
+    console.log('aqui quiero validar')
+  },[formFields])
+
 
 
    const handleFieldChange = (field, valor) => { 
@@ -43,7 +49,6 @@ const PageRegister = () => {
 
   const sendData = (event) => {
     event.preventDefault()
-    console.log('clic')
     dispatch(addInfo(formFields))
     navigate('/options')
   }
@@ -72,6 +77,7 @@ const PageRegister = () => {
           <OrganismForm
             sendData={sendData}
             handleFieldChange={handleFieldChange}
+            formFields={formFields}
           />
         </div>
       </div>

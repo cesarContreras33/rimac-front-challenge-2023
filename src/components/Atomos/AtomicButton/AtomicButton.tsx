@@ -3,13 +3,14 @@ import './AtomicButton.scss'
 
 interface AtomicButtonProps{
   label:string;
-  onClick:(e?) => void
+  onClick:(e) => void
+  disabled?:boolean
 }
 
 
-const AtomicButton:React.FC<AtomicButtonProps> = ({label, onClick}) => {
+const AtomicButton:React.FC<AtomicButtonProps> = ({label, onClick,disabled}) => {
   return (
-    <button className="atomicButton" onClick={onClick}>
+    <button className="atomicButton" onClick={onClick} disabled={disabled}>
       {label}
     </button>
   )
