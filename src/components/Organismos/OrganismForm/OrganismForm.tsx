@@ -25,21 +25,16 @@ const OrganismForm: React.FC<OrganismFormProps> = ({
 
   const onHandleChangeSelect=(tipoDoc:string)=>{
     handleFieldChange('tipoDoc',tipoDoc)
+  }
 
-  }
-  const onHandleChangeInput = () => {
-    console.log('change input')
-  }
   
-
-
   return (
     <form>
       <AtomicSelectInput
         label={'nro de documento:'}
         options={['DNI', 'CE', 'SS']}
         onChangeSelect={onHandleChangeSelect}
-        onChangeInput={onHandleChangeInput}
+
         handleFieldChange={handleFieldChange}
       />
       <AtomInput label="Celular" name="nroCell" onValueChange={onValueChange} />

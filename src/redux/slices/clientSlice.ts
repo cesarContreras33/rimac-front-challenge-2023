@@ -16,6 +16,8 @@ const initialState = {
     tipoDoc: '',
     nroDoc: '',
     nroCell:'',
+    polPriv:false,
+    polCom:false,
     plan:'',
     price:''
   }
@@ -32,10 +34,12 @@ export const clientSlice = createSlice({
       state.client.birthDay = birthDay
     },
     addInfo: (state, action) => {
-      const {tipoDoc,nroDoc,nroCell} = action.payload
+      const { tipoDoc, nroDoc, nroCell, polPriv, polCom} = action.payload
       state.client.tipoDoc = tipoDoc;
       state.client.nroDoc = nroDoc
       state.client.nroCell = nroCell
+      state.client.polPriv = polPriv
+      state.client.polCom = polCom
     },
     addResumen: (state, action) => {
       const {name,price} = action.payload

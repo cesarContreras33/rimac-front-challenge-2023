@@ -9,7 +9,6 @@ interface AtomicSelectInputProps {
   label: string
   options: string[]
   onChangeSelect: (e) => void
-  onChangeInput: (e: React.ChangeEvent<HTMLInputElement>) => void
   handleFieldChange: (inputName, inputValue) => void
 }
 
