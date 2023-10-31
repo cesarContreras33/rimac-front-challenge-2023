@@ -5,18 +5,31 @@ import AtomicButton from '../../Atomos/AtomicButton/AtomicButton'
 import AtomInput from '../../Atomos/AtomicInput/AtomicInput'
 import './OrganismForm.scss'
 import Atomiccheck from '../../Atomos/AtomicCheck/AtomicCheck';
+import {validateFields} from '../../../../utils/utils.js'
 
+import {
+  REGISTER_SELECT_OPTIONS,
+  REGISTER_CHECK_POLICY_PRIV,
+  REGISTER_CHECK_POLICY_COM,
+  REGISTER_LINK_TERM,
+  REGISTER_BUTTON,
+  REGISTER_DOC_LABEL,
+  REGISTER_CELULAR_LABEL
+} from '../../../assets/constants/constants.js'
+
+
+interface formfields{
+  tipoDoc: string
+  nroDoc: string
+  nroCell: string
+  polPriv: boolean
+  polCom: boolean
+}
 
 interface OrganismFormProps {
   sendData: (e?: React.MouseEvent) => void
   handleFieldChange: (field: string, e: string | boolean) => void
-  formFields: {
-    tipoDoc: string
-    nroDoc: string
-    nroCell: string
-    polPriv: boolean
-    polCom: boolean
-  }
+  formFields: formfields
 }
 
 
@@ -27,7 +40,7 @@ const OrganismForm: React.FC<OrganismFormProps> = ({
 }) => {
 
 
-  const onValueChange = (inputName:string,inputValue:string) => {
+  const onValueChange = (inputName:string,inputValue:string | boolean) => {
     handleFieldChange(inputName, inputValue)
   }
   
@@ -35,40 +48,34 @@ const OrganismForm: React.FC<OrganismFormProps> = ({
     handleFieldChange('tipoDoc',tipoDoc)
   }
 
-  const validateFields = (formFields) => {
-    return(
-      formFields.tipoDoc != '' &&
-      formFields.nroDoc != '' &&
-      formFields.nroCell != '' &&
-      formFields.polPriv != false &&
-      formFields.polCom != false 
-    )
-  }
-  
 
   return (
     <form>
       <AtomicSelectInput
-        label={'nro de documento:'}
-        options={['DNI', 'CE', 'SS']}
+        label={REGISTER_DOC_LABEL}
+        options={REGISTER_SELECT_OPTIONS}
         onChangeSelect={onHandleChangeSelect}
         handleFieldChange={handleFieldChange}
       />
-      <AtomInput label="Celular" name="nroCell" onValueChange={onValueChange} />
+      <AtomInput
+        label={REGISTER_CELULAR_LABEL}
+        name="nroCell"
+        onValueChange={onValueChange}
+      />
       <Atomiccheck
-        label="Acepto lo Política de Privacidad"
+        label={REGISTER_CHECK_POLICY_PRIV}
         name="polPriv"
         handleChecked={onValueChange}
       />
       <Atomiccheck
-        label="Acepto la Política Comunicaciones Comerciales"
+        label={REGISTER_CHECK_POLICY_COM}
         name="polCom"
         handleChecked={onValueChange}
       />
 
-      <AtomicLink msg={'Aplican Términos y Condiciones.'} />
+      <AtomicLink msg={REGISTER_LINK_TERM} />
       <AtomicButton
-        label="Cotiza Aqui"
+        label={REGISTER_BUTTON}
         onClick={(e) => sendData(e)}
         disabled={!validateFields(formFields)}
       />

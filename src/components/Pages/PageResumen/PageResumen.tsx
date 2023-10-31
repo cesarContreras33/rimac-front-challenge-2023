@@ -16,8 +16,6 @@ const PageResumen = () => {
 
   const dataclient = useSelector((state: any) => state.client.client)
 
-  console.log(dataclient)
-
   return (
     <div className="pageresumen">
       <AtomicBreadcrump routes={routes} />

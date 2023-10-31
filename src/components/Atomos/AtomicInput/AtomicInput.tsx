@@ -1,12 +1,8 @@
 import React, { useState } from 'react'
 import './AtomicInput.scss'
+import { InputFormProps } from '../../../types/types'
 
-interface InputFormProps {
-  label: string
-  name: string
-  onValueChange?: (name: string, value: string) => void
-  numbersRestrictions?: (text:string)=> void
-}
+
 
 const AtomicInput: React.FC<InputFormProps> = ({ label,name, onValueChange}) => {
   const [inputValue, setInputValue] = useState('')

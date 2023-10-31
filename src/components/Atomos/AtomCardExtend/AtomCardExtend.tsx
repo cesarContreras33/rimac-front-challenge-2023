@@ -1,20 +1,11 @@
-//import React from 'react'
+
 import './AtomCardExtend.scss'
 import house from '../../../assets/images/IcHomeLight.svg'
 import AtomicPill from '../AtomicPill/AtomicPill'
 import AtomicButton from '../AtomicButton/AtomicButton'
 import React from 'react'
+import { AtomCardExtendProps } from '../../../types/types'
 
-
-interface AtomCardExtendProps {
-  name?: string
-  price?: number
-  description?: string[]
-  age?: number
-  discount?: boolean
-  handleSelectPlan:(id:string,discount:boolean)=>void
-  id:string
-}
 
 
 const AtomCardExtend: React.FC<AtomCardExtendProps> = ({
@@ -26,8 +17,6 @@ const AtomCardExtend: React.FC<AtomCardExtendProps> = ({
   id
 }) => {
 
-
-  
 
   return (
     <div className="atomcard-extend">

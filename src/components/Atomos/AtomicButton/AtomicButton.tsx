@@ -1,11 +1,8 @@
 import React from 'react'
 import './AtomicButton.scss'
+import { AtomicButtonProps } from '../../../types/types'
 
-interface AtomicButtonProps{
-  label:string;
-  onClick:(e) => void
-  disabled?:boolean
-}
+
 
 
 const AtomicButton:React.FC<AtomicButtonProps> = ({label, onClick,disabled}) => {

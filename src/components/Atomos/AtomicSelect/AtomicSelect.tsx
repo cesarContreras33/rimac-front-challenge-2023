@@ -1,11 +1,7 @@
-import React, {SelectHTMLAttributes} from 'react'
+import React from 'react'
 import './AtomicSelect.scss'
+import { AtomicSelectProps } from '../../../types/types'
 
-
-interface AtomicSelectProps extends SelectHTMLAttributes<HTMLSelectElement>{
-  options:string[],
-  onChange?:(e:React.ChangeEvent<HTMLSelectElement>)=>void
-}
 
 const AtomicSelect: React.FC<AtomicSelectProps> = ({ options, onChange }) => {
   const onHandleChange = (e) => {

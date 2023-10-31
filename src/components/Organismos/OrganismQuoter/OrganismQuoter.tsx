@@ -1,30 +1,11 @@
-import React, { useState } from 'react'
-import AtomicTitle from '../../Atomos/AtomicTitle/AtomicTitle'
+import React from 'react'
 import AtomicDescription from '../../Atomos/AtomicDescription/AtomicDescription'
 import './OrganismQuoter.scss'
 import AtomCard from '../../Atomos/AtomCard/AtomCard'
 import AtomCardExtend from '../../Atomos/AtomCardExtend/AtomCardExtend'
-import { ClientType } from '../../../types/types'
+import { OrganismCuoterProps } from '../../../types/types'
 import { useSelector } from 'react-redux'
-
-//redux
-
-
-interface OrganismCuoterProps {
-  optionPlans: Plan[]
-  handleClickCard: (id: number) => void
-  plans: ClientType[]
-  discount: boolean
-  handleSelectPlan: (id:string,discount:boolean) => void
-}
-
-interface Plan {
-  id: number
-  icon: string
-  title: string
-  description: string
-  status: boolean
-}
+import AtomicTitle from '../../Atomos/AtomicTitle/AtomicTitle'
 
 
 const OrganismQuoter: React.FC<OrganismCuoterProps> = ({
@@ -37,7 +18,6 @@ const OrganismQuoter: React.FC<OrganismCuoterProps> = ({
   const client = useSelector((state: any) => state.client.client)
 
   const optionsSelected = optionPlans.some((plan) => plan.status)
-  //const [activeCard, setActiveCard] = useState(null)
 
   return (
     <div className="organismquoter">

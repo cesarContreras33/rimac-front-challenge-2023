@@ -1,17 +1,8 @@
-//import React from 'react'
-
 import './AtomCard.scss'
 import check from '../../../assets/images/ic_check.svg'
 import React from 'react'
+import { AtomCardProps } from '../../../types/types'
 
-interface AtomCardProps {
-  id?: number
-  icon: string
-  title: string
-  description: string
-  status?: boolean
-  onClick: () => void
-}
 
 const AtomCard: React.FC<AtomCardProps> = ({
   icon,

@@ -1,9 +1,7 @@
 import React from 'react'
 import './AtomicPill.scss'
+import { AtomicPillProps } from '../../../types/types'
 
-interface AtomicPillProps {
-  message: string
-}
 
 const AtomicPill: React.FC<AtomicPillProps> = ({ message }) => {
   return (

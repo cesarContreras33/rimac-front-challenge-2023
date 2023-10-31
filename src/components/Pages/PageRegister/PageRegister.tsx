@@ -11,18 +11,20 @@ import { fetchClient } from '../../../api/apiUser'
 
 import { useDispatch } from 'react-redux'
 import { addClient, addInfo } from '../../../redux/slices/clientSlice'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
-const initialFormField = {
-  tipoDoc:'DNI',
-  nroDoc:'',
-  nroCell:'',
-  polPriv:false,
-  polCom:false
-}
+import {
+  REGISTER_PILL,
+  REGISTER_TITLE,
+  REGISTER_PARR,
+  INITIALFORMFIELD
+} from '../../../assets/constants/constants.js'
+
+
+
 
 const PageRegister = () => {
-  const [formFields, setFormFields] = useState(initialFormField)
+  const [formFields, setFormFields] = useState(INITIALFORMFIELD)
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -62,18 +64,12 @@ const PageRegister = () => {
         <div className="content__right--form">
           <div className="content__right--form-group">
             <div className="form-group">
-              <AtomicPill message={'Seguro Salud Flexible'} />
-              <AtomicTitle
-                msg={'Creado para ti y tu familia'}
-              />
+              <AtomicPill message={REGISTER_PILL} />
+              <AtomicTitle msg={REGISTER_TITLE} />
             </div>
             <img src={imgFamilia} alt="" />
           </div>
-          <AtomicDescription
-            msg={
-              'Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra asesoría. 100% online.'
-            }
-          />
+          <AtomicDescription msg={REGISTER_PARR} />
           <OrganismForm
             sendData={sendData}
             handleFieldChange={handleFieldChange}

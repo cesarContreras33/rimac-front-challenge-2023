@@ -12,32 +12,17 @@ import { useNavigate } from 'react-router-dom'
 import {calcularEdad} from '../../../../utils/utils'
 import { addResumen } from '../../../redux/slices/clientSlice'
 import AtomicStep from '../../Atomos/AtomicStep/AtomicStep'
+import {
+  OPTIONS_QUOTES,
+  OPTIONS_QUOTES_PLANS,
+  OPTIONS_NAV_RESUMEN
+} from '../../../assets/constants/constants'
 
 const PageOptions = () => {
 
-  const [routes] = useState([
-    { label: 'Planes y Cobertura', num:'1', status: true },
-    { label: 'Resumen',num:'2', status: false }
-  ])
+  const [routes] = useState(OPTIONS_QUOTES)
 
-  const [optionPlans,setOptionPlans] = useState([
-    {
-      id: 1,
-      icon: 'IcProtectionLight',
-      title: 'Para mí',
-      description:
-        'Cotiza tu seguro de salud y agrega familiares si así lo deseas.',
-      status: false
-    },
-    {
-      id: 2,
-      icon: 'IcAddUserLight',
-      title: 'Para alguien más',
-      description:
-        'Realiza una cotización para uno de tus familiares o cualquier persona.',
-      status: false
-    }
-  ])
+  const [optionPlans, setOptionPlans] = useState(OPTIONS_QUOTES_PLANS)
 
   const [discount, setDiscount] = useState(false)
   const [age, setAge] = useState(0)
@@ -97,12 +82,11 @@ const PageOptions = () => {
         const newplan = {...selectPlan}
         newplan.price*=0.95
         dispatch(addResumen(newplan))
-        navigator('/resumen')
+        navigator(OPTIONS_NAV_RESUMEN)
       }else{
         dispatch(addResumen(selectPlan))
-        navigator('/resumen')
+        navigator(OPTIONS_NAV_RESUMEN)
       }
-      console.log(selectPlan)
   }
 
 

@@ -2,12 +2,10 @@
 import React from 'react'
 import AtomicTitle from '../../Atomos/AtomicTitle/AtomicTitle'
 import AtomicResumenCard from '../../Atomos/AtomicResumenCard/AtomicResumenCard'
-import { DataClient } from '../../../types/types'
+import { OrganismResumenProps } from '../../../types/types'
 import './OrganismResumen.scss'
 
-interface OrganismResumenProps {
-  dataclient:DataClient
-}
+
 
 const OrganismResumen: React.FC<OrganismResumenProps> = ({ dataclient }) => {
   return (

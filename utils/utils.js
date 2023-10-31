@@ -18,3 +18,13 @@ export const calcularEdad = async(fechaNacimiento) => {
 }
 
 
+
+export const validateFields = (formFields) => {
+  return (
+    formFields.tipoDoc != '' &&
+    formFields.nroDoc != '' &&
+    formFields.nroCell != '' &&
+    formFields.polPriv != false &&
+    formFields.polCom != false
+  )
+}

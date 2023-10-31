@@ -1,14 +1,9 @@
-//import React from 'react'
 
-import './AtomicResumenCard.scss'
-import familia from '../../../assets/images/ic_family.svg'
 import React from 'react'
-import { DataClient } from '../../../types/types'
+import familia from '../../../assets/images/ic_family.svg'
+import { AtomicResumenCardProps } from '../../../types/types'
+import './AtomicResumenCard.scss'
 
-
-interface AtomicResumenCardProps {
-  dataclient:DataClient
-}
 
 const AtomicResumenCard: React.FC<AtomicResumenCardProps> = ({ dataclient }) => {
 

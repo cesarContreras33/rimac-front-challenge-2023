@@ -1,11 +1,10 @@
 import React from 'react'
 import './AtomicLink.scss'
+import { atomicLinkProps } from '../../../types/types'
 
-interface atomicLinkProp{
-  msg:string
-}
 
-const AtomicLink: React.FC<atomicLinkProp> = ({ msg }) => {
+
+const AtomicLink: React.FC<atomicLinkProps> = ({ msg }) => {
   return(
     <div className="atomiclink">
       <p>

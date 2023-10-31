@@ -1,11 +1,8 @@
 
 import React from 'react'
 import './AtomicDescription.scss'
+import { AtomicDescriptionProps } from '../../../types/types'
 
-
-interface AtomicDescriptionProps{
-  msg:string
-}
 
 
 const AtomicDescription:React.FC<AtomicDescriptionProps> = ({msg}) => {

@@ -1,12 +1,19 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import './AtomicCheck.scss'
+import { AtomicCheckProps } from '../../../types/types'
 
-const AtomicCheck = ({ label,name, handleChecked }) => {
+
+
+const AtomicCheck: React.FC<AtomicCheckProps> = ({
+  label,
+  name,
+  handleChecked
+}) => {
   const [checked, setChecked] = useState(false)
   const toggleCheckbox = () => {
     const currentChecked = !checked
     setChecked(currentChecked)
-    handleChecked(name,currentChecked)
+    handleChecked(name, currentChecked)
   }
 
   return (
