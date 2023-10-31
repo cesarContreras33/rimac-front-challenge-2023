@@ -16,21 +16,8 @@ import {
   REGISTER_DOC_LABEL,
   REGISTER_CELULAR_LABEL
 } from '../../../assets/constants/constants.js'
+import { OrganismFormProps } from '../../../types/types.js'
 
-
-interface formfields{
-  tipoDoc: string
-  nroDoc: string
-  nroCell: string
-  polPriv: boolean
-  polCom: boolean
-}
-
-interface OrganismFormProps {
-  sendData: (e?: React.MouseEvent) => void
-  handleFieldChange: (field: string, e: string | boolean) => void
-  formFields: formfields
-}
 
 
 const OrganismForm: React.FC<OrganismFormProps> = ({
