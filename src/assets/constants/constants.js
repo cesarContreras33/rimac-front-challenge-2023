@@ -45,6 +45,8 @@ const OPTIONS_QUOTES_PLANS = [
 
 const OPTIONS_NAV_RESUMEN = '/resumen'
 
+const BUTTON_SELECTION_LABEL = 'Seleccionar Planes'
+
 
 //footer
 /* The `const FOOTER_COPYRIGHT` is defining a constant variable that holds the value `'© 2023 RIMAC
@@ -76,6 +78,7 @@ export {
   OPTIONS_QUOTES,
   OPTIONS_QUOTES_PLANS,
   OPTIONS_NAV_RESUMEN,
+  BUTTON_SELECTION_LABEL,
   FOOTER_COPYRIGHT,
   INITIALFORMFIELD
 }
