@@ -1,7 +1,7 @@
 
 import React from 'react'
-import AtomicInput from '../../Atomos/AtomicInput/AtomicInput'
-import AtomicSelect from '../../Atomos/AtomicSelect/AtomicSelect'
+import AtomicInput from '@atoms/AtomicInput/AtomicInput'
+import AtomicSelect from '@atoms/AtomicSelect/AtomicSelect'
 import './AtomicSelectInput.scss'
 
 

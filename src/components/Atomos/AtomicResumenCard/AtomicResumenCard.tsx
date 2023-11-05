@@ -1,7 +1,7 @@
 
 import React from 'react'
-import familia from '../../../assets/images/ic_family.svg'
-import { AtomicResumenCardProps } from '../../../types/types'
+import familia from '@images/ic_family.svg'
+import { AtomicResumenCardProps } from '@types/types'
 import './AtomicResumenCard.scss'
 
 

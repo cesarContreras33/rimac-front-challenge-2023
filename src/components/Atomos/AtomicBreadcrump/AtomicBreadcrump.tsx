@@ -1,7 +1,7 @@
 
 import React from 'react'
 import './AtomicBreadcrump.scss'
-import { AtomicBreadcrumpProps, AtomicBreadcrumpRoute } from '../../../types/types'
+import { AtomicBreadcrumpProps, AtomicBreadcrumpRoute } from '@types/types'
 
 
 const AtomicBreadcrump:React.FC<AtomicBreadcrumpProps> = ({routes}) => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './AtomicCheck.scss'
-import { AtomicCheckProps } from '../../../types/types'
+import { AtomicCheckProps } from '@types/types'
 
 
 

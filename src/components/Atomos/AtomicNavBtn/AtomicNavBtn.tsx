@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {useNavigate} from 'react-router-dom'
-import leftArrow from '../../../assets/images/leftarrow.svg'
+import leftArrow from '@images/leftarrow.svg'
 import './AtomicNavBtn.scss'
 
 const AtomicNavBtn:React.FC = () => {

@@ -1,11 +1,11 @@
 import React from 'react'
-import AtomicDescription from '../../Atomos/AtomicDescription/AtomicDescription'
+import AtomicDescription from '@atoms/AtomicDescription/AtomicDescription'
 import './OrganismQuoter.scss'
-import AtomCard from '../../Atomos/AtomCard/AtomCard'
-import AtomCardExtend from '../../Atomos/AtomCardExtend/AtomCardExtend'
-import { OrganismCuoterProps } from '../../../types/types'
+import AtomCard from '@atoms/AtomCard/AtomCard'
+import AtomCardExtend from '@atoms/AtomCardExtend/AtomCardExtend'
+import { OrganismCuoterProps } from '@types/types'
 import { useSelector } from 'react-redux'
-import AtomicTitle from '../../Atomos/AtomicTitle/AtomicTitle'
+import AtomicTitle from '@atoms/AtomicTitle/AtomicTitle'
 
 
 const OrganismQuoter: React.FC<OrganismCuoterProps> = ({

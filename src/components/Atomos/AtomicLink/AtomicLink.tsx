@@ -1,6 +1,6 @@
 import React from 'react'
 import './AtomicLink.scss'
-import { atomicLinkProps } from '../../../types/types'
+import { atomicLinkProps } from '@types/types'
 
 
 

@@ -1,6 +1,5 @@
 import React from 'react'
-import leftArrow from '../../../assets/images/leftarrow.svg'
-
+import leftArrow from '@images/leftarrow.svg'
 import './AtomicStep.scss'
 
 interface AtomicStepProps {

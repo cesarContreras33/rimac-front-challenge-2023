@@ -1,8 +1,8 @@
 //import React from 'react'
-import AtomicContact from '../../Atomos/AtomicContact/AtomicContact'
+import AtomicContact from '@atoms/AtomicContact/AtomicContact'
 
-import logo from '../../../assets/images/logo_rimac.svg'
-import telephone from '../../../assets/images/GlTelephoneSolid.svg'
+import logo from '@images/logo_rimac.svg'
+import telephone from '@images/GlTelephoneSolid.svg'
 import './OrganismHeader.scss'
 
 const OrganismHeader = () => {

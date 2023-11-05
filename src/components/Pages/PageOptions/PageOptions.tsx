@@ -1,22 +1,22 @@
 
 import {useState,useEffect} from 'react'
-import AtomicBreadcrump from '../../Atomos/AtomicBreadcrump/AtomicBreadcrump'
-import AtomicNavBtn from '../../Atomos/AtomicNavBtn/AtomicNavBtn'
-import './PageOptions.scss'
-import OrganismQuoter from '../../Organismos/OrganismQuoter/OrganismQuoter'
-import { useDispatch, useSelector } from 'react-redux'
-import { fetchPlans } from '../../../api/apiPlans'
-import { setPlans } from '../../../redux/slices/plansSlice'
-import { AppState} from '../../../types/types'
 import { useNavigate } from 'react-router-dom'
-import {calcularEdad} from '../../../../utils/utils'
-import { addResumen } from '../../../redux/slices/clientSlice'
-import AtomicStep from '../../Atomos/AtomicStep/AtomicStep'
+import AtomicBreadcrump from '@atoms/AtomicBreadcrump/AtomicBreadcrump'
+import AtomicNavBtn from '@atoms/AtomicNavBtn/AtomicNavBtn'
+import OrganismQuoter from '@organism/OrganismQuoter/OrganismQuoter'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchPlans } from '@api/apiPlans'
+import { setPlans } from '@redux/slices/plansSlice'
+import { AppState} from '@types/types'
+import {calcularEdad} from '@utils/utils'
+import { addResumen } from '@redux/slices/clientSlice'
+import AtomicStep from '@atoms/AtomicStep/AtomicStep'
 import {
   OPTIONS_QUOTES,
   OPTIONS_QUOTES_PLANS,
   OPTIONS_NAV_RESUMEN
-} from '../../../assets/constants/constants'
+} from '@constants/constants'
+import './PageOptions.scss'
 
 const PageOptions = () => {
 

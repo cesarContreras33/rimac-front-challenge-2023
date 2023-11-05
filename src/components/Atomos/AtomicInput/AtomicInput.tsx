@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './AtomicInput.scss'
-import { InputFormProps } from '../../../types/types'
+import { InputFormProps } from '@types/types'
 
 
 

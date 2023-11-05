@@ -1,8 +1,8 @@
 
 import React from 'react'
-import AtomicTitle from '../../Atomos/AtomicTitle/AtomicTitle'
-import AtomicResumenCard from '../../Atomos/AtomicResumenCard/AtomicResumenCard'
-import { OrganismResumenProps } from '../../../types/types'
+import AtomicTitle from '@atoms/AtomicTitle/AtomicTitle'
+import AtomicResumenCard from '@atoms/AtomicResumenCard/AtomicResumenCard'
+import { OrganismResumenProps } from '@types/types'
 import './OrganismResumen.scss'
 
 

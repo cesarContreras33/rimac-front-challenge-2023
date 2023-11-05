@@ -1,5 +1,5 @@
 import {ReactNode} from 'react'
-import OrganismHeader from '../../Organismos/OrganismHeader/OrganismHeader'
+import OrganismHeader from '@organism/OrganismHeader/OrganismHeader'
 import './LayoutTemplateWithoutFooter.scss'
 
 const LayoutTemplateWithoutFooter = ({ children }: { children: ReactNode }) => {

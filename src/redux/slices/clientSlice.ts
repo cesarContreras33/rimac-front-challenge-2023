@@ -1,6 +1,6 @@
 
 import {createSlice,createAsyncThunk} from '@reduxjs/toolkit'
-import {fetchClient} from '../../api/apiUser.js'
+import {fetchClient} from '@api/apiUser.js'
 
 export const fetchDataClient = createAsyncThunk('dataclient', async () => {
   const dataClient = await fetchClient()

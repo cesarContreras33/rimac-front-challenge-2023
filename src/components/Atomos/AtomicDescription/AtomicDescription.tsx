@@ -1,7 +1,7 @@
 
 import React from 'react'
 import './AtomicDescription.scss'
-import { AtomicDescriptionProps } from '../../../types/types'
+import { AtomicDescriptionProps } from '@types/types'
 
 
 

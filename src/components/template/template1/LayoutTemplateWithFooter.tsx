@@ -1,6 +1,6 @@
 import {ReactNode} from 'react'
-import OrganismHeader from '../../Organismos/OrganismHeader/OrganismHeader'
-import OrganismFooter from '../../Organismos/Footer/OrganismFooter'
+import OrganismHeader from '@organism/OrganismHeader/OrganismHeader'
+import OrganismFooter from '@organism/Footer/OrganismFooter'
 
 import './LayoutTemplateWithFooter.scss'
 

@@ -1,7 +1,7 @@
 import './AtomCard.scss'
-import check from '../../../assets/images/ic_check.svg'
+import check from '@images/ic_check.svg'
 import React from 'react'
-import { AtomCardProps } from '../../../types/types'
+import { AtomCardProps } from "@types/types.ts"
 
 
 const AtomCard: React.FC<AtomCardProps> = ({
@@ -11,7 +11,6 @@ const AtomCard: React.FC<AtomCardProps> = ({
   status,
   onClick
 }) => {
-  const urlImg = `/src/assets/images/${icon}.svg`
   return (
     <div className={`atomcard ${status && 'active'}`} onClick={onClick}>
       <div className="atomcard__content">
@@ -21,7 +20,7 @@ const AtomCard: React.FC<AtomCardProps> = ({
           </div>
         </div>
         <div className="atomcard__content-icon">
-          <img src={urlImg} alt={icon} />
+          <img src={`/src/assets/images/${icon}.svg`} alt={icon} />
           <h2>{title}</h2>
         </div>
         <div className="atomcard__content-info">

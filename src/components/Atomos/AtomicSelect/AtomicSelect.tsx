@@ -1,6 +1,6 @@
 import React from 'react'
 import './AtomicSelect.scss'
-import { AtomicSelectProps } from '../../../types/types'
+import { AtomicSelectProps } from '@types/types'
 
 
 const AtomicSelect: React.FC<AtomicSelectProps> = ({ options, onChange }) => {

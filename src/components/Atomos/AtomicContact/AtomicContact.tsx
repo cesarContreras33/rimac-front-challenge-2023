@@ -1,7 +1,7 @@
 
 import React from 'react'
 import './AtomicContact.scss'
-import { AtomicContactProps } from '../../../types/types'
+import { AtomicContactProps } from '@types/types'
 
 
 const AtomicContact:React.FC<AtomicContactProps> = ({msg,imgurl,tlf}) => {

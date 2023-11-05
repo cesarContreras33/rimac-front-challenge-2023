@@ -1,16 +1,16 @@
 import {useState,useEffect} from 'react'
-import imgFamilia from '../../../assets/images/familia.png'
+import imgFamilia from '@images/familia.png'
 
-import AtomicPill from '../../Atomos/AtomicPill/AtomicPill'
-import AtomicTitle from '../../Atomos/AtomicTitle/AtomicTitle'
-import AtomicDescription from '../../Atomos/AtomicDescription/AtomicDescription'
-import OrganismForm from '../../Organismos/OrganismForm/OrganismForm'
+import AtomicPill from '@atoms/AtomicPill/AtomicPill'
+import AtomicTitle from '@atoms/AtomicTitle/AtomicTitle'
+import AtomicDescription from '@atoms/AtomicDescription/AtomicDescription'
+import OrganismForm from '@organism/OrganismForm/OrganismForm'
 
 import './PageRegister.scss'
-import { fetchClient } from '../../../api/apiUser'
+import { fetchClient } from '@api/apiUser'
 
 import { useDispatch } from 'react-redux'
-import { addClient, addInfo } from '../../../redux/slices/clientSlice'
+import { addClient, addInfo } from '@redux/slices/clientSlice'
 import { useNavigate } from 'react-router-dom';
 
 import {
@@ -18,7 +18,7 @@ import {
   REGISTER_TITLE,
   REGISTER_PARR,
   INITIALFORMFIELD
-} from '../../../assets/constants/constants.js'
+} from '@constants/constants.js'
 
 
 
@@ -36,11 +36,6 @@ const PageRegister = () => {
     }
     getData()
   }, [])
-
-  useEffect(()=>{
-    console.log('aqui quiero validar')
-  },[formFields])
-
 
 
    const handleFieldChange = (field, valor) => { 

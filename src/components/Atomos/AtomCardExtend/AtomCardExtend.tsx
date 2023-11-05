@@ -1,11 +1,11 @@
 
 import './AtomCardExtend.scss'
-import house from '../../../assets/images/IcHomeLight.svg'
-import AtomicPill from '../AtomicPill/AtomicPill'
-import AtomicButton from '../AtomicButton/AtomicButton'
+import AtomicPill from '@atoms/AtomicPill/AtomicPill'
+import AtomicButton from '@atoms/AtomicButton/AtomicButton'
 import React from 'react'
-import { AtomCardExtendProps } from '../../../types/types'
-
+import { AtomCardExtendProps } from '@types/types'
+import house from '@images/IcHomeLight.svg'
+import { BUTTON_SELECTION_LABEL } from '@constants/constants'
 
 
 const AtomCardExtend: React.FC<AtomCardExtendProps> = ({
@@ -54,8 +54,8 @@ const AtomCardExtend: React.FC<AtomCardExtendProps> = ({
         </div>
         <div className="atomcard-extend__content--button">
           <AtomicButton
-            label={'Seleccionar Plan'}
-            onClick={() => handleSelectPlan(id,discount)}
+            label={BUTTON_SELECTION_LABEL}
+            onClick={() => handleSelectPlan(id, discount)}
           />
         </div>
       </div>

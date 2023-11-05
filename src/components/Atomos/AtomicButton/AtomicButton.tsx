@@ -1,6 +1,6 @@
 import React from 'react'
 import './AtomicButton.scss'
-import { AtomicButtonProps } from '../../../types/types'
+import { AtomicButtonProps } from '@types/types'
 
 
 

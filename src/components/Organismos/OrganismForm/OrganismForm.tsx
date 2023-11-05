@@ -1,11 +1,11 @@
 import React from 'react'
-import AtomicLink from '../../Atomos/AtomicLink/AtomicLink'
-import AtomicSelectInput from '../../Moleculas/AtomicSelectInput/AtomicSelectInput'
-import AtomicButton from '../../Atomos/AtomicButton/AtomicButton'
-import AtomInput from '../../Atomos/AtomicInput/AtomicInput'
+import AtomicLink from '@atoms/AtomicLink/AtomicLink'
+import AtomicSelectInput from '@molecules/AtomicSelectInput/AtomicSelectInput'
+import AtomicButton from '@atoms/AtomicButton/AtomicButton'
+import AtomInput from '@atoms/AtomicInput/AtomicInput'
 import './OrganismForm.scss'
-import Atomiccheck from '../../Atomos/AtomicCheck/AtomicCheck';
-import {validateFields} from '../../../../utils/utils.js'
+import Atomiccheck from '@atoms/AtomicCheck/AtomicCheck';
+import {validateFields} from '@utils/utils.js'
 
 import {
   REGISTER_SELECT_OPTIONS,
@@ -15,8 +15,8 @@ import {
   REGISTER_BUTTON,
   REGISTER_DOC_LABEL,
   REGISTER_CELULAR_LABEL
-} from '../../../assets/constants/constants.js'
-import { OrganismFormProps } from '../../../types/types.js'
+} from '@constants/constants.js'
+import { OrganismFormProps } from '@types/types.js'
 
 
 

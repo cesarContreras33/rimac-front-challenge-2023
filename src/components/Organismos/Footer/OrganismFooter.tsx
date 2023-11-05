@@ -1,8 +1,8 @@
-import logoWhitev1 from '../../../assets/images/logo_rimac_white.svg'
-import logoWhitev2 from '../../../assets/images/logo_rimac_white_v2.svg'
+import logoWhitev1 from '@images/logo_rimac_white.svg'
+import logoWhitev2 from '@images/logo_rimac_white_v2.svg'
 import './OrganismFooter.scss'
 
-import {FOOTER_COPYRIGHT} from '../../../assets/constants/constants'
+import {FOOTER_COPYRIGHT} from '@constants/constants'
 
 const OrganismFooter = () => {
   return (
