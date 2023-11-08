@@ -8,7 +8,7 @@ const AtomicBreadcrump:React.FC<AtomicBreadcrumpProps> = ({routes}) => {
   return (
     <div className="atomicbreadcrump">
       <div className="atomicbreadcrump__content">
-        {routes.map((route:AtomicBreadcrumpRoute, index) => (
+        {routes && routes.map((route:AtomicBreadcrumpRoute, index) => (
           <div
             className={`atomicbreadcrump__content--planes ${
               route.status && 'active'

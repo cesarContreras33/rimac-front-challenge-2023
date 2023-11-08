@@ -6,6 +6,7 @@ import AtomCardExtend from '@atoms/AtomCardExtend/AtomCardExtend'
 import { OrganismCuoterProps } from '@types/types'
 import { useSelector } from 'react-redux'
 import AtomicTitle from '@atoms/AtomicTitle/AtomicTitle'
+import { OPTIONS_TITLE,OPTIONS_DESCRIPTION } from '@constants/constants.js'
 
 
 const OrganismQuoter: React.FC<OrganismCuoterProps> = ({
@@ -24,10 +25,8 @@ const OrganismQuoter: React.FC<OrganismCuoterProps> = ({
       <div className="organismquoter__content">
         <div className="organismquoter__content--title">
           <div className="organismquoter__content--title-center">
-            <AtomicTitle msg={`${client.name} ¿Para quién deseas cotizar?`} />
-            <AtomicDescription
-              msg={'Selecciona la opción que se ajuste más a tus necesidades.'}
-            />
+            <AtomicTitle msg={`${client.name} ${OPTIONS_TITLE}`} />
+            <AtomicDescription msg={OPTIONS_DESCRIPTION} />
           </div>
         </div>
         <div className="organismquoter__content-group">
