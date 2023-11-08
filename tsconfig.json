@@ -23,7 +23,7 @@
     /*mi configuracion*/
     "noImplicitAny": false,
   },
-  "include": ["src"],
+  "include": ["src/**/*.tsx", "src/**/*.ts", "src/components/Atomos/AtomCard/AtomCard.test.ts", "src/components/Atomos/AtomCard/AtomCard.test.ts", "src/components/Atomos/AtomCard/AtomCard.test.tsx"],
   "paths":{
     "@/*":["src/*"]
   },

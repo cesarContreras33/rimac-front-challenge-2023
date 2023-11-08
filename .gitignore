@@ -117,7 +117,9 @@ $RECYCLE.BIN/
 # .pnp.*
 
 
+# unit testing
 
+__snapshots__
 
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,react,macos,sass,yarn
