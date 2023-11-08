@@ -176,5 +176,103 @@ se tomo en cuenta emplear una estructura centrada en TDD , o seaun enfoque a apl
 
 
 
+## TESTING CON VITEST
+
+### SCRIPT TEST
+en package.json
+
+```json
+'scripts':{
+   'test': 'vitest'
+}
+
+```
+
+### VITEST UI
+install vitest ui:
+
+```js
+npm install -D @vitest/ui
+```
+
+config test ui en script:
+```js
+  "scripts": {
+    "test-ui":"vitest --ui"
+  },
+```
+
+En terminal:
+npm run test-ui
+
+
+### IMPORTACION DE METODOS
+
+se puede obviar importaciones de vitest como: describe,test ... etc.
+
+```js
+import {describe,test,expect} from 'vitest
+```
+
+se puede ocnfigurar de la siguiente manera
+
+vite.config.ts
+
+```js
+  test:{
+    globals: true,
+    environment: "jsdom",
+    css:true
+  }
+```
+para que los metodos de vitest esten disponibles globalmente:
+globals:true
+
+al quitar las importaciones posiblemente te marque error debido a que typescript intente entender que metodos son los que estas ingresando en el test
+
+```js
+describe('unit-test atomicCard component',() => {
+  test('should ', () => {
+    expect(3+6).toBe(9)
+  });
+})
+```
+
+podemos hacer que vite evite esas validaciones, para eso configuraremos vite.config.ts
+agregando la siguiente linea:
+```js
+/// <reference types="vite/client" />
+```
+
+puedes reiniciar Ts server:
+1. Aprieta F1 
+2. en la caja escribe Ts server y enter
+
+con esto reinicias los datos de typescript
+
+
+En documentacion getting started:
+buscar globals 
+encontraras que se debe configurar vitest en typescript
+
+
+en tsconfig.json:
+```js
+  "compilerOptions": {
+   //otras configuraciones
+    "types":["vitest/globals"],
+```
+
+si te aparece marcado describe como un error posiblemente sea por que necesita que importes algo ya que los test son considerados script globales.
+
+
+
+
+instalaremos react testing library
+
+```js
+npm install -D @testing-library/react
+```
+
 
 
