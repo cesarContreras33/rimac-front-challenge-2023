@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './AtomicCheck.scss'
 import { AtomicCheckProps } from '@types/types'
+import AtomicCheckVisual from './AtomicCheckVisual.tsx'
 
 
 
@@ -17,11 +18,11 @@ const AtomicCheck: React.FC<AtomicCheckProps> = ({
   }
 
   return (
-    <label className={`mt-24 atomiccheck ${checked ? 'checked' : ''}`}>
-      <input type="checkbox" checked={checked} onChange={toggleCheckbox} />
-      <span className="checkmark"></span>
-      {label}
-    </label>
+    <AtomicCheckVisual 
+      checked={checked} 
+      label={label} 
+      toggleCheckbox={toggleCheckbox}
+    />
   )
 }
 
