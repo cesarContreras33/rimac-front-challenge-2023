@@ -99,6 +99,12 @@ export interface AtomicCheckProps {
   handleChecked: (inputName: string, inputValue: boolean) => void
 }
 
+export interface AtomicCheckVisualProps {
+  checked: boolean
+  label: string
+  toggleCheckbox: () => void
+}
+
 export interface AtomicContactProps {
   msg: string
   imgurl: string
@@ -154,3 +160,6 @@ export interface OrganismFormProps {
   handleFieldChange: (field: string, e: string | boolean) => void
   formFields: formfields
 }
+
+
+

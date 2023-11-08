@@ -23,6 +23,9 @@ const OPTIONS_QUOTES = [
   { label: 'Resumen', num: '2', status: false }
 ]
 
+const OPTIONS_TITLE = '¿Para quién deseas cotizar?'
+const OPTIONS_DESCRIPTION = 'Selecciona la opción que se ajuste más a tus necesidades.'
+
 
 const OPTIONS_QUOTES_PLANS = [
   {
@@ -42,6 +45,10 @@ const OPTIONS_QUOTES_PLANS = [
     status: false
   }
 ]
+
+const OPTIONS_PILL_MSG = 'plan recomendado'
+
+const OPTIONS_PLAN_MSG = 'costo de plan'
 
 const OPTIONS_NAV_RESUMEN = '/resumen'
 
@@ -76,7 +83,11 @@ export {
   REGISTER_DOC_LABEL,
   REGISTER_CELULAR_LABEL,
   OPTIONS_QUOTES,
+  OPTIONS_TITLE,
+  OPTIONS_DESCRIPTION,
   OPTIONS_QUOTES_PLANS,
+  OPTIONS_PILL_MSG,
+  OPTIONS_PLAN_MSG,
   OPTIONS_NAV_RESUMEN,
   BUTTON_SELECTION_LABEL,
   FOOTER_COPYRIGHT,
