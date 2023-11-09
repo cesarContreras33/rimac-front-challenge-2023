@@ -34,7 +34,8 @@ export default defineConfig({
       "@pages": path.resolve(__dirname,"src/components/Pages"),
       "@redux": path.resolve(__dirname,"src/redux"),
       "@utils": path.resolve(__dirname,"utils"),
-      "@api": path.resolve(__dirname,"src/api")
+      "@api": path.resolve(__dirname,"src/api"),
+      "@routers": path.resolve(__dirname,"src/routers")
     }
   },
   build:{
