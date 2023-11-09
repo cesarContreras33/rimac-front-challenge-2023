@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import { store } from '@redux/store'
 
 describe('organismQuoter unit testing component', () => {
-  test('', () => {
+  test('should show render component', () => {
     const { container } = render(
       <Provider store={store}>
         <OrganismQuoter
