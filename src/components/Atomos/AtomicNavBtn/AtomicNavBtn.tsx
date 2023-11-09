@@ -4,6 +4,7 @@ import React from 'react'
 import {useNavigate} from 'react-router-dom'
 import leftArrow from '@images/leftarrow.svg'
 import './AtomicNavBtn.scss'
+import {ACTION_BACK} from '@constants/constants'
 
 const AtomicNavBtn:React.FC = () => {
   
@@ -19,7 +20,7 @@ const AtomicNavBtn:React.FC = () => {
         <div className="btntype">
           <img src={leftArrow} alt="arrow" />
         </div>
-        <p>Volver</p>
+        <p>{ACTION_BACK}</p>
       </div>
     </div>
   )
