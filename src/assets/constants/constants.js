@@ -54,6 +54,15 @@ const OPTIONS_NAV_RESUMEN = '/resumen'
 
 const BUTTON_SELECTION_LABEL = 'Seleccionar Planes'
 
+//resumen 
+
+const RESUMEN_TITLE ='Precios calculados para:'
+const RESUMEN_SUBTITLE ='Responsable de pago'
+const RESUMEN_CELL ='Celular:'
+const RESUMEN_PLAN ='Plan elegido:'
+const RESUMEN_COSTO_PLAN ='Costo del Plan'
+
+
 
 //footer
 /* The `const FOOTER_COPYRIGHT` is defining a constant variable that holds the value `'© 2023 RIMAC
@@ -71,7 +80,7 @@ const INITIALFORMFIELD = {
 
 
 //commons
-const ACTION_BACK = 'volver'
+const ACTION_BACK = 'Volver'
 
 
 export { 
@@ -93,6 +102,11 @@ export {
   OPTIONS_PLAN_MSG,
   OPTIONS_NAV_RESUMEN,
   BUTTON_SELECTION_LABEL,
+  RESUMEN_TITLE,
+  RESUMEN_SUBTITLE,
+  RESUMEN_CELL,
+  RESUMEN_PLAN,
+  RESUMEN_COSTO_PLAN,
   FOOTER_COPYRIGHT,
   INITIALFORMFIELD,
   ACTION_BACK
